@@ -1,205 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Portfolio of Vignesh Sampath - CloudOps Engineer">
-  <title>Vignesh Sampath | CloudOps Engineer</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f5f5f5;
-      color: #333;
-    }
-
-    header {
-      background: linear-gradient(135deg, #0077cc, #005fa3);
-      color: white;
-      padding: 30px 20px;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 10px 0 5px;
-      font-size: 2.2rem;
-    }
-
-    header p {
-      font-size: 1.1rem;
-      opacity: 0.9;
-    }
-
-    .profile-img {
-      width: 150px;
-      border-radius: 50%;
-      margin-top: 15px;
-      border: 4px solid white;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      transition: transform 0.3s ease;
-    }
-
-    .profile-img:hover {
-      transform: scale(1.05);
-    }
-
-    section {
-      padding: 20px;
-      background-color: white;
-      margin: 20px auto;
-      max-width: 900px;
-      border-radius: 8px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.05);
-      animation: fadeIn 0.5s ease-in-out;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    h2 {
-      color: #0077cc;
-      border-bottom: 2px solid #0077cc;
-      padding-bottom: 5px;
-    }
-
-    ul {
-      list-style-type: disc;
-      padding-left: 20px;
-    }
-
-    a {
-      color: #0077cc;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .skills span {
-      display: inline-block;
-      background: #e6f3ff;
-      color: #0077cc;
-      padding: 5px 10px;
-      border-radius: 5px;
-      margin: 5px 5px 0 0;
-      font-size: 0.9rem;
-      transition: background 0.3s ease;
-    }
-
-    .skills span:hover {
-      background: #cce6ff;
-    }
-
-    footer {
-      text-align: center;
-      padding: 15px;
-      background-color: #eaeaea;
-      font-size: 0.9rem;
-      color: #555;
-      margin-top: 20px;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vignesh Sampath - CloudOps Engineer</title>
+<style>
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+  }
+  header {
+    background-color: #0077cc;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  .profile-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-top: 15px;
+    border: 3px solid white;
+  }
+  section {
+    padding: 20px;
+    background-color: white;
+    margin: 10px auto;
+    max-width: 900px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  }
+  h2 {
+    color: #0077cc;
+  }
+  ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  a {
+    color: #0077cc;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  .contact {
+    text-align: center;
+  }
+  .contact a {
+    display: block;
+    margin: 5px 0;
+    font-size: 1.1em;
+  }
+</style>
 </head>
 <body>
 
 <header>
-  <img src="1000075941.jpg" alt="Vignesh Sampath" class="profile-img" />
   <h1>Vignesh Sampath</h1>
-  <p>CloudOps Engineer | GCP & AWS Specialist</p>
+  <p>CloudOps Engineer</p>
+  <img src="1000075941.jpg" alt="Vignesh Sampath" class="profile-img">
 </header>
 
 <section>
   <h2>About Me</h2>
-  <p>
-    I’m Vignesh Sampath, a passionate and results-driven <strong>CloudOps Engineer</strong> with 4+ years of experience designing, deploying, and managing cloud infrastructure on <strong>Google Cloud Platform (GCP)</strong> and AWS. 
-    Currently working at Rappit, I specialize in <strong>infrastructure automation, Kubernetes orchestration, security best practices, landing zone architecture, and DevOps pipelines</strong>. 
-    I thrive on solving complex cloud challenges, enabling secure migrations from on-premises environments, and ensuring scalability, reliability, and cost optimization for enterprise workloads.
-  </p>
+  <p>Experienced CloudOps Engineer with expertise in GCP, AWS, DevOps practices, and automation. Skilled in managing infrastructure, cloud security, CI/CD pipelines, landing zone setups, VPN establishments, and on-prem to cloud data migrations.</p>
 </section>
 
 <section>
   <h2>Roles & Responsibilities</h2>
   <ul>
-    <li><strong>Cloud Landing Zone Setup</strong> – Designing and implementing secure, scalable multi-project landing zones in GCP, including IAM hierarchy, networking, and policy controls.</li>
-    <li><strong>Cloud Infrastructure Management</strong> – Maintaining highly available, secure, and cost-optimized environments in GCP and AWS.</li>
-    <li><strong>Data Migrations</strong> – Planning and executing migrations from on-premises environments to GCP, including storage transfer, database migration, and hybrid networking setup.</li>
-    <li><strong>VPN & Networking</strong> – Establishing Cloud VPN connections for secure hybrid environments; configuring VPCs, subnets, firewall rules, and routing.</li>
-    <li><strong>Kubernetes & GKE Management</strong> – Deploying, scaling, and securing workloads on Google Kubernetes Engine.</li>
-    <li><strong>CI/CD Implementation</strong> – Building automated pipelines using Cloud Build, GitHub Actions, GitLab CI/CD, and Terraform to streamline deployments.</li>
-    <li><strong>Workload Identity Federation</strong> – Implementing secure authentication between CI/CD systems and GCP without service account keys.</li>
-    <li><strong>Monitoring & Incident Response</strong> – Using Cloud Monitoring, Cloud Logging, and PagerDuty to ensure proactive issue detection and resolution.</li>
-    <li><strong>Collaboration</strong> – Working closely with development, security, and operations teams to align cloud solutions with business objectives.</li>
-  </ul>
-</section>
-
-<section>
-  <h2>Projects</h2>
-  <h3>1. Solvay – GCP Infrastructure Modernization & Data Migration</h3>
-  <ul>
-    <li>Migrated workloads from on-premises to GCP using VPN connectivity and storage/database migration services.</li>
-    <li>Deployed Kubernetes workloads on GKE, integrated with CI/CD pipelines (Cloud Build, GitHub Actions, GitLab CI/CD).</li>
-    <li>Reduced deployment time by 60% through automation and Terraform provisioning.</li>
-  </ul>
-
-  <h3>2. Hoyer – GCP Landing Zone, Cloud Cost Optimization & Security Hardening</h3>
-  <ul>
-    <li>Designed and implemented a GCP <strong>Landing Zone</strong> with multi-project structure, IAM hierarchy, and centralized logging/monitoring.</li>
-    <li>Established <strong>Cloud VPN</strong> to extend on-prem network into GCP for hybrid workloads.</li>
-    <li>Performed cost analysis and implemented autoscaling policies for resource optimization.</li>
-    <li>Enabled IAM least-privilege access, workload identity, and advanced network security enhancements.</li>
-    <li>Reduced monthly cloud spend by 25% while improving security posture.</li>
-  </ul>
-
-  <h3>3. CloudOps Automation Toolkit (Internal Project)</h3>
-  <ul>
-    <li>Developed Terraform modules and scripts for repeatable landing zone creation and infrastructure provisioning.</li>
-    <li>Automated alerting workflows integrated with Slack & PagerDuty for real-time incident notifications.</li>
+    <li>Cloud infrastructure setup and management in GCP & AWS.</li>
+    <li>Landing zone setup (Hoyer project) with secure networking.</li>
+    <li>VPN establishment between on-premises and cloud environments.</li>
+    <li>Data migrations from on-premises to cloud.</li>
+    <li>CI/CD pipeline setup using Cloud Build, GitHub Actions, and GitLab CI.</li>
+    <li>Workload Identity Federation setup for GitHub Actions.</li>
+    <li>Cloud security best practices and monitoring.</li>
   </ul>
 </section>
 
 <section>
   <h2>Skills</h2>
-  <div class="skills">
-    <span>Google Cloud Platform (GCP)</span>
-    <span>AWS</span>
-    <span>Landing Zone Design</span>
-    <span>Hybrid Cloud Setup</span>
-    <span>On-Prem to Cloud Migration</span>
-    <span>Kubernetes</span>
-    <span>GKE</span>
-    <span>Docker</span>
-    <span>Cloud Build</span>
-    <span>GitHub Actions</span>
-    <span>GitLab CI/CD</span>
-    <span>Jenkins</span>
-    <span>Terraform</span>
-    <span>VPC</span>
-    <span>Cloud VPN</span>
-    <span>Load Balancers</span>
-    <span>IAM</span>
-    <span>Workload Identity Federation</span>
-    <span>SSL/TLS</span>
-    <span>Cloud SQL</span>
-    <span>Firestore</span>
-    <span>BigQuery</span>
-    <span>Cloud Monitoring</span>
-    <span>Cloud Logging</span>
-    <span>Prometheus</span>
-    <span>Grafana</span>
-    <span>PagerDuty</span>
-    <span>Python</span>
-    <span>Bash</span>
-    <span>Terraform Modules</span>
-  </div>
+  <ul>
+    <li>GCP, AWS</li>
+    <li>Terraform, Infrastructure as Code</li>
+    <li>Cloud Build, GitHub Actions, GitLab CI</li>
+    <li>Docker, Kubernetes, GKE</li>
+    <li>Networking & VPN</li>
+    <li>Cloud Security</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Projects</h2>
+  <ul>
+    <li><strong>Hoyer:</strong> Landing zone setup, VPN establishment, and migration of workloads to GCP.</li>
+    <li><strong>Solvay:</strong> Cloud Build CI/CD pipeline setup with Terraform automation.</li>
+  </ul>
+</section>
+
+<section class="contact">
+  <h2>Contact Me</h2>
+  <a href="mailto:vikichan1014@gmail.com">📧 vikichan1014@gmail.com</a>
+  <a href="tel:+919790182304">📱 +91 9790182304</a>
+  <a href="https://www.linkedin.com/in/vignesh-sampath-4701691b1" target="_blank">💼 LinkedIn Profile</a>
 </section>
 
 <footer>
-  <p>© 2025 Vignesh Sampath | <a href="mailto:vikichan1014@gmail.com">vikichan1014@gmail.com</a> | 
-  <a href="https://www.linkedin.com/in/vignesh-sampath-4701691b1" target="_blank">LinkedIn</a></p>
+  <p>© 2025 Vignesh Sampath | CloudOps Engineer</p>
 </footer>
 
 </body>
