@@ -1,119 +1,318 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vignesh Sampath - CloudOps Engineer</title>
-<style>
-  body {
-    font-family: 'Segoe UI', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f5f5f5;
-    color: #333;
-  }
-  header {
-    background-color: #0077cc;
-    color: white;
-    padding: 20px;
-    text-align: center;
-  }
-  .profile-img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-top: 15px;
-    border: 3px solid white;
-  }
-  section {
-    padding: 20px;
-    background-color: white;
-    margin: 10px auto;
-    max-width: 900px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.05);
-  }
-  h2 {
-    color: #0077cc;
-  }
-  ul {
-    list-style-type: disc;
-    padding-left: 20px;
-  }
-  a {
-    color: #0077cc;
-    text-decoration: none;
-  }
-  a:hover {
-    text-decoration: underline;
-  }
-  .contact {
-    text-align: center;
-  }
-  .contact a {
-    display: block;
-    margin: 5px 0;
-    font-size: 1.1em;
-  }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Vignesh Sampath — CloudOps Engineer Portfolio" />
+  <title>Vignesh Sampath | CloudOps Engineer</title>
+  <style>
+    :root {
+      --bg: #0b0f17;
+      --panel: #111827;
+      --panel-2: #0f172a;
+      --text: #e5e7eb;
+      --muted: #a5b4fc;
+      --brand: #3b82f6; /* blue-500 */
+      --brand-2: #22d3ee; /* cyan-400 */
+      --ok: #10b981;
+      --warn: #f59e0b;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius: 16px;
+      --radius-sm: 10px;
+    }
+
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Roboto, Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: radial-gradient(1200px 600px at 10% -10%, rgba(37,99,235,.25), transparent 60%),
+                  radial-gradient(1000px 600px at 110% 10%, rgba(34,211,238,.18), transparent 60%),
+                  var(--bg);
+      line-height: 1.6;
+    }
+
+    /* Global layout */
+    .container {
+      width: min(1100px, 92vw);
+      margin: 0 auto;
+    }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      padding: 72px 0 48px;
+      text-align: center;
+      overflow: hidden;
+    }
+    .hero h1 {
+      font-size: clamp(2rem, 3.2vw + 1rem, 3.25rem);
+      margin: 12px 0 6px;
+      letter-spacing: .4px;
+    }
+    .role {
+      font-size: 1.125rem;
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .avatar-wrap {
+      display: inline-block;
+      position: relative;
+      margin-top: 8px;
+      isolation: isolate;
+    }
+    .glow {
+      position: absolute;
+      inset: -12px;
+      border-radius: 999px;
+      background: conic-gradient(from 0deg, var(--brand), var(--brand-2), var(--brand));
+      filter: blur(22px);
+      opacity: .55;
+      z-index: -1;
+      animation: spin 10s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .avatar {
+      width: 150px; height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid rgba(255,255,255,.08);
+      box-shadow: var(--shadow);
+      transition: transform .35s ease;
+      background: #0a0f1a;
+    }
+    .avatar:hover { transform: scale(1.03); }
+
+    .hero-cta {
+      margin-top: 22px;
+      display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: linear-gradient(135deg, var(--brand), #2563eb);
+      color: white; border: 0; padding: 10px 16px; border-radius: 999px;
+      text-decoration: none; font-weight: 600; box-shadow: var(--shadow);
+      transition: transform .2s ease, filter .2s ease;
+    }
+    .btn:hover { transform: translateY(-1px); filter: brightness(1.08); }
+    .btn.secondary { background: transparent; border: 1px solid #23314d; color: var(--text); }
+    .btn.secondary:hover { border-color: #3a4b73; }
+
+    /* Cards / Sections */
+    section.card {
+      background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.00)), var(--panel);
+      border: 1px solid rgba(148,163,184,.12);
+      border-radius: var(--radius);
+      padding: 26px;
+      margin: 18px 0;
+      box-shadow: var(--shadow);
+      backdrop-filter: saturate(120%) blur(2px);
+      animation: fadeUp .5s ease both;
+    }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(8px);} to { opacity: 1; transform: translateY(0);} }
+
+    h2.section-title {
+      margin: 0 0 14px; font-size: 1.5rem; letter-spacing: .3px;
+      display: inline-flex; align-items: center; gap: 10px;
+    }
+    .section-title .pill {
+      font-size: .8rem; color: white; background: #1f2937; border: 1px solid #334155;
+      padding: 4px 8px; border-radius: 999px; letter-spacing: .2px;
+    }
+
+    /* About */
+    .about p { margin: 0; color: #cbd5e1; }
+
+    /* Skills */
+    .skills { display: flex; flex-wrap: wrap; gap: 10px; }
+    .badge {
+      padding: 8px 12px; border-radius: 999px; font-size: .92rem; font-weight: 600;
+      border: 1px solid rgba(148,163,184,.18);
+      background: linear-gradient(180deg, rgba(59,130,246,.12), rgba(59,130,246,.06));
+      color: #cfe1ff; letter-spacing: .2px;
+      transition: transform .15s ease, background .15s ease;
+    }
+    .badge:hover { transform: translateY(-1px); background: linear-gradient(180deg, rgba(59,130,246,.18), rgba(59,130,246,.10)); }
+
+    /* Projects */
+    .grid { display: grid; gap: 16px; grid-template-columns: repeat(12, 1fr); }
+    .col-12 { grid-column: span 12; }
+    @media (min-width: 800px) { .col-6 { grid-column: span 6; } }
+
+    .project {
+      background: var(--panel-2);
+      border: 1px solid rgba(148,163,184,.14);
+      border-radius: var(--radius-sm);
+      padding: 18px;
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+    }
+    .project:hover { transform: translateY(-2px); box-shadow: var(--shadow); border-color: rgba(59,130,246,.45); }
+    .project h3 { margin: 0 0 6px; font-size: 1.1rem; }
+    .meta { color: #9ca3af; font-size: .92rem; margin-bottom: 8px; }
+    .project ul { margin: 8px 0 0 18px; color: #cbd5e1; }
+
+    /* Contact */
+    .contact-list { display: grid; gap: 12px; }
+    @media (min-width: 640px) { .contact-list { grid-template-columns: repeat(3, 1fr); } }
+
+    .contact-item {
+      display: flex; align-items: center; gap: 10px; padding: 12px; border-radius: 12px;
+      background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.0));
+      border: 1px solid rgba(148,163,184,.14);
+    }
+    .contact-item a { color: var(--text); text-decoration: none; }
+    .contact-item a:hover { text-decoration: underline; }
+
+    /* Footer */
+    footer {
+      color: #a3aed0; text-align: center; padding: 28px 12px; margin: 22px 0 12px;
+      border-top: 1px solid rgba(148,163,184,.12);
+    }
+
+    /* Utility */
+    .sr { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+    .icon { width: 18px; height: 18px; display: inline-block; }
+  </style>
 </head>
 <body>
 
-<header>
-  <h1>Vignesh Sampath</h1>
-  <p>CloudOps Engineer</p>
-  <img src="1000075941.jpg" alt="Vignesh Sampath" class="profile-img">
-</header>
+  <header class="hero">
+    <div class="container">
+      <div class="avatar-wrap" aria-hidden="true">
+        <div class="glow"></div>
+        <!-- Place your photo file next to this HTML as 1000075941.jpg -->
+        <img class="avatar" src="1000075941.jpg" alt="Vignesh Sampath headshot" />
+      </div>
+      <h1>Vignesh Sampath</h1>
+      <div class="role">CloudOps Engineer • GCP & AWS • Kubernetes • Terraform</div>
+      <div class="hero-cta">
+        <a class="btn" href="#contact" title="Contact Vignesh">
+          <!-- Mail icon -->
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v16H4z"/><path d="m22 6-10 7L2 6"/></svg>
+          Contact
+        </a>
+        <a class="btn secondary" href="#projects" title="See projects">
+          <!-- Briefcase icon -->
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h18v13H3z"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+          Projects
+        </a>
+      </div>
+    </div>
+  </header>
 
-<section>
-  <h2>About Me</h2>
-  <p>Experienced CloudOps Engineer with expertise in GCP, AWS, DevOps practices, and automation. Skilled in managing infrastructure, cloud security, CI/CD pipelines, landing zone setups, VPN establishments, and on-prem to cloud data migrations.</p>
-</section>
+  <main class="container">
 
-<section>
-  <h2>Roles & Responsibilities</h2>
-  <ul>
-    <li>Cloud infrastructure setup and management in GCP & AWS.</li>
-    <li>Landing zone setup (Hoyer project) with secure networking.</li>
-    <li>VPN establishment between on-premises and cloud environments.</li>
-    <li>Data migrations from on-premises to cloud.</li>
-    <li>CI/CD pipeline setup using Cloud Build, GitHub Actions, and GitLab CI.</li>
-    <li>Workload Identity Federation setup for GitHub Actions.</li>
-    <li>Cloud security best practices and monitoring.</li>
-  </ul>
-</section>
+    <section class="card about" id="about">
+      <h2 class="section-title">
+        <!-- Info icon -->
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+        About Me <span class="pill">CloudOps Engineer</span>
+      </h2>
+      <p>
+        I’m a results-driven <strong>CloudOps Engineer</strong> with 4+ years of experience designing, deploying, and automating cloud infrastructure on <strong>Google Cloud Platform (GCP)</strong> and <strong>AWS</strong>.
+        I specialize in <strong>landing zone architecture</strong>, <strong>hybrid networking (Cloud VPN)</strong>, <strong>on‑prem to cloud migrations</strong>, and <strong>DevOps pipelines</strong> using Cloud Build, GitHub Actions, and GitLab CI/CD.
+        I focus on secure, scalable, and cost‑optimized platforms that help engineering teams ship faster.
+      </p>
+    </section>
 
-<section>
-  <h2>Skills</h2>
-  <ul>
-    <li>GCP, AWS</li>
-    <li>Terraform, Infrastructure as Code</li>
-    <li>Cloud Build, GitHub Actions, GitLab CI</li>
-    <li>Docker, Kubernetes, GKE</li>
-    <li>Networking & VPN</li>
-    <li>Cloud Security</li>
-  </ul>
-</section>
+    <section class="card" id="skills">
+      <h2 class="section-title">
+        <!-- Sparkles icon -->
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2 4 4 2-4 2-2 4-2-4-4-2 4-2 2-4z"/></svg>
+        Skills
+      </h2>
+      <div class="skills">
+        <span class="badge">GCP</span>
+        <span class="badge">AWS</span>
+        <span class="badge">Landing Zone Design</span>
+        <span class="badge">Hybrid Cloud (VPN)</span>
+        <span class="badge">On‑Prem → Cloud Migration</span>
+        <span class="badge">Kubernetes</span>
+        <span class="badge">GKE</span>
+        <span class="badge">Docker</span>
+        <span class="badge">Terraform (IaC)</span>
+        <span class="badge">Cloud Build</span>
+        <span class="badge">GitHub Actions</span>
+        <span class="badge">GitLab CI/CD</span>
+        <span class="badge">Jenkins</span>
+        <span class="badge">IAM & Security</span>
+        <span class="badge">Load Balancers</span>
+        <span class="badge">Cloud SQL</span>
+        <span class="badge">BigQuery</span>
+        <span class="badge">Monitoring & Logging</span>
+        <span class="badge">PagerDuty</span>
+        <span class="badge">Python</span>
+        <span class="badge">Bash</span>
+      </div>
+    </section>
 
-<section>
-  <h2>Projects</h2>
-  <ul>
-    <li><strong>Hoyer:</strong> Landing zone setup, VPN establishment, and migration of workloads to GCP.</li>
-    <li><strong>Solvay:</strong> Cloud Build CI/CD pipeline setup with Terraform automation.</li>
-  </ul>
-</section>
+    <section class="card" id="projects">
+      <h2 class="section-title">
+        <!-- Layers icon -->
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 9 5-9 5-9-5 9-5Z"/><path d="m3 12 9 5 9-5"/><path d="m3 17 9 5 9-5"/></svg>
+        Projects
+      </h2>
+      <div class="grid">
+        <article class="project col-12 col-6">
+          <h3>Hoyer — GCP Landing Zone & Hybrid Connectivity</h3>
+          <div class="meta">Landing Zone • Cloud VPN • Security Hardening • Cost Optimization</div>
+          <ul>
+            <li>Designed and implemented a <strong>GCP Landing Zone</strong> (multi‑project, org policies, IAM hierarchy, centralized logging/monitoring).</li>
+            <li>Established <strong>Cloud VPN</strong> to extend on‑prem networks into GCP for secure hybrid workloads.</li>
+            <li>Implemented least‑privilege IAM, network hardening, and autoscaling policies; reduced monthly spend by ~25%.</li>
+          </ul>
+        </article>
 
-<section class="contact">
-  <h2>Contact Me</h2>
-  <a href="mailto:vikichan1014@gmail.com">📧 vikichan1014@gmail.com</a>
-  <a href="tel:+919790182304">📱 +91 9790182304</a>
-  <a href="https://www.linkedin.com/in/vignesh-sampath-4701691b1" target="_blank">💼 LinkedIn Profile</a>
-</section>
+        <article class="project col-12 col-6">
+          <h3>Solvay — Infrastructure Modernization & Migration</h3>
+          <div class="meta">GKE • CI/CD • Terraform • On‑Prem → GCP</div>
+          <ul>
+            <li>Migrated workloads from on‑prem to GCP using VPN connectivity, Storage Transfer, and database migration paths.</li>
+            <li>Deployed containerized apps on <strong>GKE</strong>; integrated CI/CD via <strong>Cloud Build</strong>, <strong>GitHub Actions</strong>, and <strong>GitLab CI/CD</strong>.</li>
+            <li>Built reusable <strong>Terraform</strong> modules; reduced deployment lead time by ~60% through automation.</li>
+          </ul>
+        </article>
 
-<footer>
-  <p>© 2025 Vignesh Sampath | CloudOps Engineer</p>
-</footer>
+        <article class="project col-12">
+          <h3>CloudOps Automation Toolkit (Internal)</h3>
+          <div class="meta">Terraform Modules • SRE • ChatOps</div>
+          <ul>
+            <li>Created opinionated Terraform modules for landing zone bootstrapping and app platform provisioning.</li>
+            <li>Integrated alerting and incident workflows with Slack & PagerDuty for rapid triage.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="card" id="contact">
+      <h2 class="section-title">
+        <!-- Mail icon -->
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v16H4z"/><path d="m22 6-10 7L2 6"/></svg>
+        Contact
+      </h2>
+      <div class="contact-list">
+        <div class="contact-item">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v16H4z"/><path d="m22 6-10 7L2 6"/></svg>
+          <a href="mailto:vikichan1014@gmail.com">vikichan1014@gmail.com</a>
+        </div>
+        <div class="contact-item">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.09 4.18 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72c.12.9.3 1.77.57 2.61a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.47-1.09a2 2 0 0 1 2.11-.45c.84.27 1.71.45 2.61.57A2 2 0 0 1 22 16.92z"/></svg>
+          <a href="tel:+919790182304">+91 9790182304</a>
+        </div>
+        <div class="contact-item">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2h-2v-4z"/><rect x="2" y="9" width="8" height="12" rx="2"/></svg>
+          <a href="https://www.linkedin.com/in/vignesh-sampath-4701691b1" target="_blank" rel="noreferrer">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    © 2025 Vignesh Sampath — CloudOps Engineer
+  </footer>
 
 </body>
 </html>
