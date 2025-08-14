@@ -7,56 +7,99 @@
   <title>Vignesh Sampath | CloudOps Engineer</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      background-color: #f4f4f4;
+      padding: 0;
+      background-color: #f5f5f5;
       color: #333;
-      line-height: 1.6;
     }
+
     header {
-      background: #004aad;
-      color: #fff;
-      padding: 20px 10px;
+      background: linear-gradient(135deg, #0077cc, #005fa3);
+      color: white;
+      padding: 30px 20px;
       text-align: center;
     }
+
     header h1 {
-      margin: 0;
-      font-size: 2rem;
+      margin: 10px 0 5px;
+      font-size: 2.2rem;
     }
+
     header p {
       font-size: 1.1rem;
+      opacity: 0.9;
     }
+
+    .profile-img {
+      width: 150px;
+      border-radius: 50%;
+      margin-top: 15px;
+      border: 4px solid white;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .profile-img:hover {
+      transform: scale(1.05);
+    }
+
     section {
-      max-width: 900px;
-      margin: auto;
       padding: 20px;
-      background: #fff;
-      margin-top: 20px;
+      background-color: white;
+      margin: 20px auto;
+      max-width: 900px;
       border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.05);
+      animation: fadeIn 0.5s ease-in-out;
     }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
     h2 {
-      color: #004aad;
-      border-bottom: 2px solid #004aad;
+      color: #0077cc;
+      border-bottom: 2px solid #0077cc;
       padding-bottom: 5px;
     }
+
     ul {
-      margin: 10px 0;
+      list-style-type: disc;
       padding-left: 20px;
     }
+
+    a {
+      color: #0077cc;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
     .skills span {
       display: inline-block;
-      background: #e6f0ff;
-      color: #004aad;
+      background: #e6f3ff;
+      color: #0077cc;
       padding: 5px 10px;
       border-radius: 5px;
       margin: 5px 5px 0 0;
       font-size: 0.9rem;
+      transition: background 0.3s ease;
     }
+
+    .skills span:hover {
+      background: #cce6ff;
+    }
+
     footer {
       text-align: center;
       padding: 15px;
+      background-color: #eaeaea;
       font-size: 0.9rem;
-      color: #777;
+      color: #555;
       margin-top: 20px;
     }
   </style>
@@ -64,6 +107,7 @@
 <body>
 
 <header>
+  <img src="1000075941.jpg" alt="Vignesh Sampath" class="profile-img" />
   <h1>Vignesh Sampath</h1>
   <p>CloudOps Engineer | GCP & AWS Specialist</p>
 </header>
