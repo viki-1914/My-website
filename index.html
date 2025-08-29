@@ -3,162 +3,172 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vignesh Sampath | Cloud & DevOps Engineer</title>
+  <title>Vignesh Sampath - Cloud & DevOps Engineer</title>
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-      color: #fff;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f7fb;
+      color: #333;
     }
     header {
-      background: rgba(0,0,0,0.6);
+      background: linear-gradient(135deg, #4f46e5, #06b6d4);
+      color: white;
       text-align: center;
-      padding: 2rem 1rem;
+      padding: 50px 20px;
     }
     header img {
-      width: 160px;
-      height: 160px;
+      width: 150px;
+      height: 150px;
       border-radius: 50%;
-      border: 4px solid #fff;
-      margin-bottom: 1rem;
+      border: 4px solid white;
+      margin-bottom: 15px;
     }
     header h1 {
-      margin: 0;
+      margin: 10px 0 5px;
       font-size: 2.5rem;
     }
     header p {
       font-size: 1.2rem;
-      color: #ddd;
+      margin: 5px 0 15px;
     }
-    nav {
-      background: #111;
-      display: flex;
-      justify-content: center;
-      padding: 0.5rem;
-    }
-    nav a {
-      color: #fff;
-      margin: 0 1rem;
+    header a {
       text-decoration: none;
+      background: white;
+      color: #4f46e5;
+      padding: 10px 20px;
+      border-radius: 25px;
       font-weight: bold;
+      transition: background 0.3s;
     }
-    nav a:hover {
-      color: #00c6ff;
+    header a:hover {
+      background: #e0e7ff;
     }
     section {
-      padding: 3rem 10%;
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
     }
     section h2 {
       text-align: center;
-      margin-bottom: 2rem;
-      font-size: 2rem;
-      color: #00c6ff;
+      color: #4f46e5;
+      margin-bottom: 25px;
     }
-    .about, .skills, .projects, .contact {
-      background: rgba(255,255,255,0.05);
+    .card {
+      background: white;
       border-radius: 12px;
-      padding: 2rem;
-      margin-bottom: 2rem;
-      box-shadow: 0px 4px 12px rgba(0,0,0,0.4);
+      padding: 20px;
+      margin: 20px 0;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
     }
-    .skills ul, .projects ul {
-      list-style: none;
-      padding: 0;
-    }
-    .skills li, .projects li {
-      padding: 0.5rem 0;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
-    }
-    .resume-btn {
-      display: block;
-      text-align: center;
-      margin-top: 1rem;
-    }
-    .resume-btn a {
-      background: #00c6ff;
-      color: #111;
-      padding: 0.7rem 1.5rem;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .resume-btn a:hover {
-      background: #fff;
-      color: #111;
+    .card:hover {
+      transform: translateY(-5px);
     }
     footer {
+      background: #1e293b;
+      color: white;
       text-align: center;
-      padding: 1.5rem;
-      background: #111;
-      font-size: 0.9rem;
-      color: #aaa;
+      padding: 20px;
+      margin-top: 40px;
     }
     footer a {
-      color: #00c6ff;
+      color: #06b6d4;
       text-decoration: none;
-      margin: 0 0.5rem;
     }
-    footer a:hover {
-      color: #fff;
+    .contact-info {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-top: 15px;
     }
   </style>
 </head>
 <body>
+
+  <!-- HEADER -->
   <header>
     <img src="1000075941.jpg" alt="Profile Picture">
     <h1>Vignesh Sampath</h1>
-    <p>Associate Team Lead - CloudOps | Cloud & DevOps Engineer</p>
+    <p>Cloud & DevOps Engineer | GCP | AWS | Kubernetes | Automation</p>
+    <a href="Vignesh_Sampath_Resume.pdf" download>📄 Download Resume</a>
   </header>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <section id="about" class="about">
+  <!-- ABOUT -->
+  <section id="about">
     <h2>About Me</h2>
-    <p>
-      I am a CloudOps & DevOps Engineer with 4+ years of experience specializing in Google Cloud Platform (GCP), GKE, infrastructure management, security, and automation practices. 
-      Currently working as an <strong>Associate Team Lead - CloudOps</strong> at Rappit, I have hands-on expertise in building scalable, secure, and cost-efficient cloud solutions.
-    </p>
-    <div class="resume-btn">
-      <a href="resume.pdf" download>📄 Download Resume</a>
+    <div class="card">
+      <p>
+        I am a Cloud & DevOps Engineer with 4+ years of experience specializing in
+        <strong>Google Cloud Platform (GCP)</strong>, <strong>AWS</strong>, and <strong>Kubernetes</strong>.
+        Skilled in Infrastructure Management, Cloud Security, and Automation with DevOps practices.
+        Passionate about building scalable, secure, and cost-optimized cloud solutions.
+      </p>
     </div>
   </section>
 
-  <section id="skills" class="skills">
-    <h2>Skills & Certifications</h2>
-    <ul>
-      <li>Google Cloud Platform (GCP) | AWS (Learning)</li>
-      <li>Kubernetes (GKE) | Cloud Run | Terraform | CI/CD</li>
-      <li>DevOps Tools: GitHub, GitLab, Jenkins</li>
-      <li>Cloud Security | IAM | Networking</li>
-      <li>Certifications: [List here if available]</li>
-    </ul>
+  <!-- SKILLS -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="card">
+      <p><strong>Cloud:</strong> GCP, AWS</p>
+      <p><strong>Containerization:</strong> Kubernetes (GKE), Cloud Run, Docker</p>
+      <p><strong>Automation:</strong> Terraform, GitHub Actions, Cloud Build</p>
+      <p><strong>Security:</strong> IAM, Workload Identity Federation, VPNs, Firewalls</p>
+      <p><strong>Other:</strong> Git, GitHub, GitLab, CI/CD pipelines</p>
+    </div>
   </section>
 
-  <section id="projects" class="projects">
+  <!-- PROJECTS -->
+  <section id="projects">
     <h2>Projects</h2>
-    <ul>
-      <li><strong>Solvay:</strong> Automated infrastructure on GCP using GKE and Terraform.</li>
-      <li><strong>Hoyer:</strong> Migrated workloads to Cloud Run, reducing cost and complexity.</li>
-      <li><a href="blogs/alloydb.html">📘 AlloyDB IAM Authentication Blog</a></li>
-      <li><a href="blogs/fortigate.html">📘 FortiGate Cloud VPN Blog</a></li>
-    </ul>
+    <div class="card">
+      <h3>Enterprise Landing Zone Setup</h3>
+      <p>Designed and implemented secure, multi-project landing zone with
+      networking, IAM, and organization policies for a large enterprise migration.</p>
+    </div>
+    <div class="card">
+      <h3>Application Migration to GCP</h3>
+      <p>Automated migration of on-prem workloads to GCP using Cloud Run, GKE, and Cloud SQL.
+      Reduced infrastructure costs by 35% while improving scalability.</p>
+    </div>
+    <div class="card">
+      <h3>VPC & VPN Setup</h3>
+      <p>Configured hybrid connectivity with Cloud VPN and VPC peering
+      ensuring secure communication between on-premise and cloud workloads.</p>
+    </div>
   </section>
 
-  <section id="contact" class="contact">
+  <!-- BLOGS -->
+  <section id="blogs">
+    <h2>Blogs</h2>
+    <div class="card">
+      <h3><a href="blogs/alloydb.html">AlloyDB Backup & Restore Automation</a></h3>
+      <p>Step-by-step guide on automating AlloyDB backups and restores using Cloud Run Jobs.</p>
+    </div>
+    <div class="card">
+      <h3><a href="blogs/fortigate.html">Fortigate Firewall with GCP</a></h3>
+      <p>Deep dive into setting up and managing Fortigate firewall in Google Cloud for security.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
     <h2>Contact Me</h2>
-    <p>📧 Email: <a href="mailto:vikichan1014@gmail.com">vikichan1014@gmail.com</a></p>
-    <p>🔗 LinkedIn: <a href="https://www.linkedin.com/in/vignesh-sampath-4701691b1" target="_blank">linkedin.com/in/vignesh-sampath</a></p>
-    <p>📱 Phone: <a href="tel:+919790182304">+91 9790182304</a></p>
+    <div class="card">
+      <div class="contact-info">
+        <p>📧 <a href="mailto:vikichan1014@gmail.com">vikichan1014@gmail.com</a></p>
+        <p>🔗 <a href="https://www.linkedin.com/in/vignesh-sampath-4701691b1" target="_blank">LinkedIn</a></p>
+        <p>📞 9790182304</p>
+      </div>
+    </div>
   </section>
 
+  <!-- FOOTER -->
   <footer>
-    <p>&copy; 2025 Vignesh Sampath | CloudOps & DevOps Portfolio</p>
+    <p>© 2025 Vignesh Sampath | Cloud & DevOps Engineer</p>
   </footer>
+
 </body>
 </html>
