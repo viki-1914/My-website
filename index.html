@@ -3,307 +3,90 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vignesh Sampath | CloudOps & DevOps Engineer</title>
-  <meta name="description" content="Vignesh Sampath — CloudOps & DevOps Engineer. GCP & AWS, Kubernetes, Terraform, CI/CD, WIF, Cloud Run Jobs, AlloyDB automation." />
-  <meta name="keywords" content="Vignesh Sampath, CloudOps, DevOps, GCP, AWS, Kubernetes, Terraform, Cloud Run, Cloud Run Jobs, AlloyDB, Memorystore, VPC, WIF, Workload Identity Federation, CI/CD" />
-  <link rel="icon" href="favicon.ico" />
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Vignesh Sampath | CloudOps & DevOps Engineer" />
-  <meta property="og:description" content="CloudOps & DevOps Engineer specialising in GCP, Kubernetes, Terraform & CI/CD. Projects: WIF with GitHub, Cloud Run Jobs, AlloyDB import/export." />
-  <meta property="og:image" content="1000075941.jpg" />
-  <meta property="og:url" content="https://your-domain.example" />
-
-  <style>
-    :root{
-      --bg:#0b0f17;--panel:#111827;--panel-2:#0f172a;--text:#e5e7eb;--muted:#a5b4fc;--brand:#3b82f6;--brand-2:#22d3ee;--ok:#10b981;--warn:#f59e0b;--radius:16px;--radius-sm:12px;--shadow:0 10px 30px rgba(0,0,0,.35)
-    }
-    [data-theme="light"]{--bg:#f6f7fb;--panel:#ffffff;--panel-2:#f3f6ff;--text:#0b1020;--muted:#475569;--brand:#2563eb;--brand-2:#06b6d4}
-    html,body{height:100%}
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial,Helvetica,sans-serif;color:var(--text);background:
-      radial-gradient(1200px 600px at 10% -10%, rgba(37,99,235,.25), transparent 60%),
-      radial-gradient(1000px 600px at 110% 10%, rgba(34,211,238,.18), transparent 60%),var(--bg);line-height:1.6}
-    .container{width:min(1200px,92vw);margin:0 auto}
-
-    /* Header */
-    header.hero{position:relative;padding:72px 0 36px;text-align:center}
-    h1{font-size:clamp(2rem,3vw+1rem,3rem);margin:6px 0}
-    .role{color:var(--muted);font-weight:600}
-    .avatar-wrap{display:inline-block;position:relative;margin-top:10px;isolation:isolate}
-    .glow{position:absolute;inset:-12px;border-radius:999px;background:conic-gradient(from 0deg,var(--brand),var(--brand-2),var(--brand));filter:blur(22px);opacity:.55;z-index:-1;animation:spin 10s linear infinite}
-    @keyframes spin{to{transform:rotate(360deg)}}
-    .avatar{width:148px;height:148px;border-radius:50%;object-fit:cover;border:3px solid rgba(255,255,255,.08);box-shadow:var(--shadow)}
-    .hero-cta{margin-top:18px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
-    .btn{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--brand),#1d4ed8);color:white;padding:10px 16px;border-radius:999px;text-decoration:none;font-weight:700;box-shadow:var(--shadow);border:0}
-    .btn.secondary{background:transparent;border:1px solid #334155;color:var(--text)}
-    .btn:hover{filter:brightness(1.05);transform:translateY(-1px)}
-
-    /* Layout */
-    main{display:grid;gap:16px;grid-template-columns:1fr}
-    @media(min-width:980px){main{grid-template-columns:2.1fr .9fr}}
-
-    section.card, aside.card{background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,0)),var(--panel);border:1px solid rgba(148,163,184,.14);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
-    h2.section-title{margin:0 0 10px;font-size:1.35rem;display:flex;align-items:center;gap:10px}
-    .pill{font-size:.78rem;color:white;background:#1f2937;border:1px solid #334155;padding:4px 8px;border-radius:999px}
-
-    /* About */
-    .about p{margin:0;color:#cbd5e1}
-    .timeline{margin:10px 0 0;padding:0;list-style:none}
-    .timeline li{display:grid;grid-template-columns:120px 1fr;gap:14px;margin:10px 0}
-    .timeline .when{color:#94a3b8;font-weight:600}
-
-    /* Skills */
-    .skills-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
-    @media(min-width:720px){.skills-grid{grid-template-columns:repeat(3,1fr)}}
-    .skill-card{background:var(--panel-2);border:1px solid rgba(148,163,184,.14);border-radius:12px;padding:12px}
-    .skill-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
-    .tag{padding:6px 10px;border-radius:999px;font-size:.9rem;border:1px solid rgba(148,163,184,.18);background:linear-gradient(180deg,rgba(59,130,246,.14),rgba(59,130,246,.06));color:#cfe1ff}
-
-    /* Projects */
-    .projects{display:grid;grid-template-columns:1fr;gap:14px}
-    @media(min-width:760px){.projects{grid-template-columns:repeat(2,1fr)}}
-    .project{background:var(--panel-2);border:1px solid rgba(148,163,184,.14);border-radius:12px;padding:16px;transition:transform .2s ease,border-color .2s ease}
-    .project:hover{transform:translateY(-2px);border-color:rgba(59,130,246,.45)}
-    .meta{color:#9ca3af;font-size:.92rem;margin:4px 0 8px}
-    .project ul{margin:8px 0 0 18px;color:#cbd5e1}
-
-    /* Right rail */
-    .stack{display:grid;gap:14px}
-    .resume-box a{display:flex;align-items:center;gap:10px}
-    .kv{display:grid;grid-template-columns:110px 1fr;gap:8px;font-size:.95rem}
-    .kv div{padding:2px 0}
-
-    /* Blog */
-    .blog-list{display:grid;gap:12px}
-    .post{background:var(--panel-2);border:1px solid rgba(148,163,184,.14);border-radius:12px;padding:14px}
-
-    /* Contact */
-    .contact-list{display:grid;gap:10px}
-    @media(min-width:620px){.contact-list{grid-template-columns:repeat(3,1fr)}}
-    .contact-item{display:flex;align-items:center;gap:10px;padding:12px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,0));border:1px solid rgba(148,163,184,.14)}
-    .contact-item a{color:inherit;text-decoration:none}
-    .contact-item a:hover{text-decoration:underline}
-
-    footer{color:#a3aed0;text-align:center;padding:28px 12px;margin:22px 0 12px;border-top:1px solid rgba(148,163,184,.12)}
-
-    .row{display:flex;gap:10px;flex-wrap:wrap}
-    .sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-    .icon{width:18px;height:18px;display:inline-block}
-    .toggle{position:fixed;right:14px;bottom:14px;z-index:10}
-  </style>
+  <title>Vignesh Sampath - CloudOps & DevOps Engineer</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <button class="btn toggle" id="themeToggle" title="Toggle theme">🌙 / ☀️</button>
-
-  <header class="hero">
-    <div class="container">
-      <div class="avatar-wrap" aria-hidden="true">
-        <div class="glow"></div>
-        <!-- Place your photo as 1000075941.jpg next to this HTML file -->
-        <img src="1000075941.jpg" alt="Vignesh Sampath headshot" class="avatar" />
-      </div>
-      <h1>Vignesh Sampath</h1>
-      <div class="role">CloudOps & DevOps Engineer • GCP & AWS • Kubernetes • Terraform</div>
-      <div class="hero-cta">
-        <a class="btn" href="#contact">Contact</a>
-        <a class="btn secondary" href="#projects">Projects</a>
-        <a class="btn" href="resume.pdf" download>📄 Download Resume</a>
-      </div>
-    </div>
+  <header>
+    <h1>Vignesh Sampath</h1>
+    <p>Associate Team Lead - CloudOps1 | CloudOps & DevOps Engineer</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#blog">Blog</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <main class="container">
-    <!-- Main column -->
-    <div class="stack">
-      <section class="card about" id="about">
-        <h2 class="section-title">About Me <span class="pill">CloudOps + DevOps</span></h2>
-        <p>
-          I’m a results-driven <strong>CloudOps & DevOps Engineer</strong> with 4+ years building secure, scalable, and cost‑efficient platforms on <strong>GCP</strong> and <strong>AWS</strong>.
-          I specialise in <strong>landing zones</strong>, <strong>hybrid networking (Cloud VPN)</strong>, <strong>GKE/Kubernetes</strong>, and <strong>CI/CD</strong> using Cloud Build, GitHub Actions (with <strong>Workload Identity Federation</strong>), and GitLab.
-        </p>
-        <ul class="timeline">
-          <li><div class="when">2024–2025</div><div>Associate Team Lead – CloudOps1 @ Rappit • Led GCP landing zone & DevOps initiatives across teams.</div></li>
-          <li><div class="when">2021–2024</div><div>CloudOps Engineer • Built infra automation with Terraform, migrated on‑prem to GCP, introduced CI/CD & observability.</div></li>
-        </ul>
-      </section>
+  <!-- About -->
+  <section id="about" class="card">
+    <h2 class="section-title">About Me</h2>
+    <p>
+      I’m a CloudOps & DevOps Engineer with 4 years of experience in
+      <strong>Google Cloud Platform (GCP)</strong> and growing expertise in AWS.
+      I focus on scalable, secure, and cost-efficient cloud solutions, automation,
+      and Kubernetes orchestration.
+    </p>
+  </section>
 
-      <section class="card" id="skills">
-        <h2 class="section-title">Skills</h2>
-        <div class="skills-grid">
-          <div class="skill-card">
-            <strong>Cloud (Ops)</strong>
-            <div class="skill-tags">
-              <span class="tag">GCP</span><span class="tag">AWS</span><span class="tag">VPC / VPN</span><span class="tag">Load Balancing</span><span class="tag">Cloud SQL / AlloyDB</span>
-            </div>
-          </div>
-          <div class="skill-card">
-            <strong>DevOps</strong>
-            <div class="skill-tags">
-              <span class="tag">CI/CD</span><span class="tag">GitHub Actions</span><span class="tag">Cloud Build</span><span class="tag">GitLab CI/CD</span><span class="tag">ArgoCD (GitOps)</span>
-            </div>
-          </div>
-          <div class="skill-card">
-            <strong>Containers</strong>
-            <div class="skill-tags">
-              <span class="tag">Docker</span><span class="tag">GKE</span><span class="tag">Helm</span><span class="tag">Kustomize</span>
-            </div>
-          </div>
-          <div class="skill-card">
-            <strong>IaC & Scripting</strong>
-            <div class="skill-tags">
-              <span class="tag">Terraform</span><span class="tag">Python</span><span class="tag">Bash</span>
-            </div>
-          </div>
-          <div class="skill-card">
-            <strong>Observability</strong>
-            <div class="skill-tags">
-              <span class="tag">Cloud Logging</span><span class="tag">Monitoring</span><span class="tag">Prometheus</span><span class="tag">Grafana</span>
-            </div>
-          </div>
-          <div class="skill-card">
-            <strong>Security</strong>
-            <div class="skill-tags">
-              <span class="tag">IAM</span><span class="tag">WIF</span><span class="tag">Secret Manager</span><span class="tag">Policy as Code</span>
-            </div>
-          </div>
-        </div>
-      </section>
+  <!-- Skills -->
+  <section id="skills" class="card">
+    <h2 class="section-title">Skills</h2>
+    <ul class="skills-list">
+      <li>GCP (GKE, Cloud Build, VPC, IAM, Cloud Run)</li>
+      <li>AWS (EC2, IAM, S3, Networking)</li>
+      <li>Kubernetes & Helm</li>
+      <li>Terraform & Infrastructure as Code</li>
+      <li>CI/CD (Cloud Build, GitHub Actions, GitLab CI)</li>
+      <li>Security (Workload Identity Federation, Secrets Management)</li>
+    </ul>
+  </section>
 
-      <section class="card" id="projects">
-        <h2 class="section-title">Projects</h2>
-        <div class="projects">
-          <article class="project">
-            <h3>Workload Identity Federation (WIF) with GitHub Actions → GCP</h3>
-            <div class="meta">OIDC • Least Privilege • No long‑lived keys</div>
-            <ul>
-              <li>Implemented <strong>WIF OIDC trust</strong> between GitHub and GCP to remove JSON key secrets.</li>
-              <li>Repo‑scoped pool/provider with <strong>attribute conditions</strong> for branch & environment.</li>
-              <li>Reusable Actions for <code>gcloud auth</code>, <code>terraform apply</code>, and Cloud Run deploys.</li>
-            </ul>
-          </article>
+  <!-- Projects -->
+  <section id="projects" class="card">
+    <h2 class="section-title">Projects</h2>
+    <ul>
+      <li><strong>Solvay:</strong> Automated AlloyDB backup/restore with Cloud Run jobs.</li>
+      <li><strong>Hoyer:</strong> Migrated workloads to GCP GKE with cost optimization.</li>
+      <li><strong>Memcache Automation:</strong> Replaced VM with Cloud Run job for
+          automated cache flushing, reducing costs.</li>
+    </ul>
+  </section>
 
-          <article class="project">
-            <h3>Cloud Run Jobs — Memcache Cleaner</h3>
-            <div class="meta">Serverless batch • Artifact Registry • Schedules (Cloud Scheduler)</div>
-            <ul>
-              <li>Built a <strong>Cloud Run Job</strong> that periodically clears stale keys in <strong>Memorystore (Memcached)</strong>.</li>
-              <li>Container published to <strong>Artifact Registry</strong>; job triggered via <strong>Cloud Scheduler</strong>.</li>
-              <li>Service Account with least privilege + <strong>VPC connector</strong> to reach private IP.</li>
-            </ul>
-          </article>
-
-          <article class="project">
-            <h3>AlloyDB Import/Export via Cloud Run Jobs</h3>
-            <div class="meta">Database automation • Private IP • Secret Manager</div>
-            <ul>
-              <li>Automated <strong>export/import</strong> flows for <strong>AlloyDB</strong> using psql/pg_dump inside a Cloud Run Job.</li>
-              <li>Credentials from <strong>Secret Manager</strong>; backups stored in <strong>GCS</strong> with lifecycle policies.</li>
-              <li>Private connectivity using <strong>Serverless VPC Connector</strong>.</li>
-            </ul>
-          </article>
-
-          <article class="project">
-            <h3>GCP Landing Zone & Hybrid Connectivity</h3>
-            <div class="meta">Org Policies • IAM • Cloud VPN • Centralised logging</div>
-            <ul>
-              <li>Multi‑project landing zone with org policy guardrails and centralised audit logging.</li>
-              <li>Hybrid networking via <strong>Cloud VPN</strong> to extend on‑prem workloads.</li>
-              <li>Terraform modules & cost controls reduced spend by ~25%.</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <section class="card" id="blog">
-        <h2 class="section-title">Blog / Learnings</h2>
-        <div class="blog-list">
-          <article class="post">
-            <h3>Cloud Run ↔ VPC: When & How</h3>
-            <p>Understanding Serverless VPC Connectors, private egress, and patterns for DB/Redis access from Cloud Run.</p>
-          </article>
-          <article class="post">
-            <h3>Secure CI/CD with GitHub Actions + WIF</h3>
-            <p>Eliminate JSON keys using OIDC, attribute conditions, and least‑privilege on GCP.</p>
-          </article>
-          <article class="post">
-            <h3>AlloyDB Backups with Cloud Run Jobs</h3>
-            <p>Export/import automation with Secret Manager, GCS lifecycle, and retries.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="card" id="contact">
-        <h2 class="section-title">Contact</h2>
-        <div class="contact-list">
-          <div class="contact-item"><span>📧</span><a href="mailto:vikichan1014@gmail.com">vikichan1014@gmail.com</a></div>
-          <div class="contact-item"><span>📞</span><a href="tel:+919790182304">+91 9790182304</a></div>
-          <div class="contact-item"><span>🔗</span><a href="https://www.linkedin.com/in/vignesh-sampath-4701691b1" target="_blank" rel="noreferrer">LinkedIn</a></div>
-        </div>
-      </section>
+  <!-- Blog -->
+  <section id="blog" class="card">
+    <h2 class="section-title">Blog / Learnings</h2>
+    <div class="blog-list">
+      <article class="post">
+        <h3><a href="blogs/fortigate-vpn.html" target="_blank">FortiGate VPN Setup – Step by Step</a></h3>
+        <p>My experience setting up a secure Cloud VPN with FortiGate and GCP. Covers challenges, configs, and lessons learned.</p>
+      </article>
+      <article class="post">
+        <h3><a href="blogs/cloudrun-vpc.html" target="_blank">Cloud Run ↔ VPC: When & How</a></h3>
+        <p>Understanding Serverless VPC Connectors, private egress, and patterns for DB/Redis access from Cloud Run.</p>
+      </article>
+      <article class="post">
+        <h3><a href="blogs/github-actions-wif.html" target="_blank">Secure CI/CD with GitHub Actions + WIF</a></h3>
+        <p>Eliminate JSON keys using OIDC, attribute conditions, and least-privilege on GCP.</p>
+      </article>
+      <article class="post">
+        <h3><a href="blogs/alloydb-backups.html" target="_blank">AlloyDB Backups with Cloud Run Jobs</a></h3>
+        <p>Export/import automation with Secret Manager, GCS lifecycle, and retries.</p>
+      </article>
     </div>
+  </section>
 
-    <!-- Right rail (personalization + resume column) -->
-    <aside class="stack">
-      <aside class="card resume-box">
-        <h2 class="section-title">Resume & Quick Links</h2>
-        <p>Keep an up‑to‑date copy of your resume and quick references.</p>
-        <div class="row">
-          <a class="btn" href="resume.pdf" download>📄 Download Resume</a>
-          <a class="btn secondary" href="#blog">📝 Read Blog</a>
-        </div>
-        <div class="kv" style="margin-top:12px">
-          <div><strong>Location</strong></div><div>Chennai, India</div>
-          <div><strong>Open to</strong></div><div>Cloud/DevOps Roles</div>
-          <div><strong>Email</strong></div><div><a href="mailto:vikichan1014@gmail.com">vikichan1014@gmail.com</a></div>
-        </div>
-      </aside>
+  <!-- Contact -->
+  <section id="contact" class="card">
+    <h2 class="section-title">Contact</h2>
+    <p>Email: <a href="mailto:vikichan1014@gmail.com">vikichan1014@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/vignesh-sampath-4701691b1" target="_blank">linkedin.com/in/vignesh-sampath</a></p>
+    <p>Phone: +91 9790182304</p>
+  </section>
 
-      <aside class="card">
-        <h2 class="section-title">How I Implemented WIF</h2>
-        <ol>
-          <li>Create <strong>WIF Pool</strong> + <strong>Provider (OIDC)</strong> trusting <code>token.actions.githubusercontent.com</code>.</li>
-          <li>Restrict by attributes: <code>attribute.repository</code>, <code>attribute.ref</code>, <code>attribute.actor</code>.</li>
-          <li>Grant <strong>workloadIdentityUser</strong> on a minimal‑priv SA consumed by pipelines.</li>
-          <li>In GitHub Actions, use <code>auth workload-identity-federation</code> to obtain short‑lived creds.</li>
-        </ol>
-        <p style="margin-top:6px">Outcome: no long‑lived keys, auditable, least‑privilege.</p>
-      </aside>
-
-      <aside class="card">
-        <h2 class="section-title">Cloud Run Jobs + Memcache</h2>
-        <ul>
-          <li>Image in Artifact Registry, Job defined with retries/timeouts.</li>
-          <li>Triggered via Cloud Scheduler on a cron.</li>
-          <li>VPC Connector for private IP access to Memorystore (Memcached).</li>
-          <li>Observability via structured logs + alert policies.</li>
-        </ul>
-      </aside>
-
-      <aside class="card">
-        <h2 class="section-title">AlloyDB Import/Export (Jobs)</h2>
-        <ul>
-          <li>Secrets pulled at runtime from Secret Manager.</li>
-          <li>Backup to GCS with lifecycle rules (cost control).</li>
-          <li>Runbook & rollback plan; tested restores in lower envs.</li>
-        </ul>
-      </aside>
-    </aside>
-  </main>
-
-  <footer>© 2025 Vignesh Sampath — CloudOps & DevOps Engineer</footer>
-
-  <script>
-    // Theme toggle (persist in localStorage)
-    const root=document.documentElement;const key='vs-theme';
-    const saved=localStorage.getItem(key);
-    if(saved){document.documentElement.setAttribute('data-theme', saved)}
-    document.getElementById('themeToggle').addEventListener('click',()=>{
-      const cur=document.documentElement.getAttribute('data-theme');
-      const next=cur==='light'?null:'light';
-      if(next){document.documentElement.setAttribute('data-theme','light');localStorage.setItem(key,'light')} else {document.documentElement.removeAttribute('data-theme');localStorage.removeItem(key)}
-    });
-  </script>
+  <footer>
+    <p>© 2025 Vignesh Sampath | Built with ❤️ in DevOps style</p>
+  </footer>
 </body>
 </html>
