@@ -1,39 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vignesh Sampath - CloudOps & DevOps Engineer</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Header -->
   <header>
-    <h1>Vignesh Sampath</h1>
-    <p>Associate Team Lead - CloudOps1 | CloudOps & DevOps Engineer</p>
+    <div class="container">
+      <img src="1000075941.jpg" alt="Vignesh Sampath" class="profile-pic">
+      <h1>Vignesh Sampath</h1>
+      <p>Associate Team Lead - CloudOps1 | CloudOps & DevOps Engineer</p>
+    </div>
     <nav>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#blog">Blog</a>
-      <a href="#contact">Contact</a>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="/blogs">Blog</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </nav>
   </header>
 
   <!-- About -->
-  <section id="about" class="card">
-    <h2 class="section-title">About Me</h2>
-    <p>
-      I’m a CloudOps & DevOps Engineer with 4 years of experience in
-      <strong>Google Cloud Platform (GCP)</strong> and growing expertise in AWS.
-      I focus on scalable, secure, and cost-efficient cloud solutions, automation,
-      and Kubernetes orchestration.
-    </p>
+  <section id="about" class="section">
+    <h2>About Me</h2>
+    <p>I’m a CloudOps & DevOps Engineer with 4 years of experience in <strong>Google Cloud Platform (GCP)</strong> and growing expertise in AWS. I focus on scalable, secure, and cost-efficient cloud solutions, automation, and orchestration.</p>
   </section>
 
   <!-- Skills -->
-  <section id="skills" class="card">
-    <h2 class="section-title">Skills</h2>
-    <ul class="skills-list">
+  <section id="skills" class="section">
+    <h2>Skills</h2>
+    <ul>
       <li>GCP (GKE, Cloud Build, VPC, IAM, Cloud Run)</li>
       <li>AWS (EC2, IAM, S3, Networking)</li>
       <li>Kubernetes & Helm</li>
@@ -44,49 +45,24 @@
   </section>
 
   <!-- Projects -->
-  <section id="projects" class="card">
-    <h2 class="section-title">Projects</h2>
-    <ul>
-      <li><strong>Solvay:</strong> Automated AlloyDB backup/restore with Cloud Run jobs.</li>
-      <li><strong>Hoyer:</strong> Migrated workloads to GCP GKE with cost optimization.</li>
-      <li><strong>Memcache Automation:</strong> Replaced VM with Cloud Run job for
-          automated cache flushing, reducing costs.</li>
-    </ul>
-  </section>
-
-  <!-- Blog -->
-  <section id="blog" class="card">
-    <h2 class="section-title">Blog / Learnings</h2>
-    <div class="blog-list">
-      <article class="post">
-        <h3><a href="blogs/fortigate-vpn.html" target="_blank">FortiGate VPN Setup – Step by Step</a></h3>
-        <p>My experience setting up a secure Cloud VPN with FortiGate and GCP. Covers challenges, configs, and lessons learned.</p>
-      </article>
-      <article class="post">
-        <h3><a href="blogs/cloudrun-vpc.html" target="_blank">Cloud Run ↔ VPC: When & How</a></h3>
-        <p>Understanding Serverless VPC Connectors, private egress, and patterns for DB/Redis access from Cloud Run.</p>
-      </article>
-      <article class="post">
-        <h3><a href="blogs/github-actions-wif.html" target="_blank">Secure CI/CD with GitHub Actions + WIF</a></h3>
-        <p>Eliminate JSON keys using OIDC, attribute conditions, and least-privilege on GCP.</p>
-      </article>
-      <article class="post">
-        <h3><a href="blogs/alloydb-backups.html" target="_blank">AlloyDB Backups with Cloud Run Jobs</a></h3>
-        <p>Export/import automation with Secret Manager, GCS lifecycle, and retries.</p>
-      </article>
-    </div>
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+    <p>✔ Automated Memcache flushing by replacing VMs with Cloud Run, reducing cost drastically.<br>
+       ✔ Automated AlloyDB backup & restore with Cloud Run Jobs.<br>
+       ✔ Built secure, scalable infrastructure using Terraform and Kubernetes.<br>
+       ✔ Set up CI/CD pipelines using Cloud Build & GitHub Actions with Workload Identity Federation.</p>
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="card">
-    <h2 class="section-title">Contact</h2>
+  <section id="contact" class="section">
+    <h2>Contact</h2>
     <p>Email: <a href="mailto:vikichan1014@gmail.com">vikichan1014@gmail.com</a></p>
     <p>LinkedIn: <a href="https://www.linkedin.com/in/vignesh-sampath-4701691b1" target="_blank">linkedin.com/in/vignesh-sampath</a></p>
-    <p>Phone: +91 9790182304</p>
   </section>
 
+  <!-- Footer -->
   <footer>
-    <p>© 2025 Vignesh Sampath | Built with ❤️ in DevOps style</p>
+    <p>© 2025 Vignesh Sampath | Built with ❤️ using GitHub Pages</p>
   </footer>
 </body>
 </html>
