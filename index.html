@@ -5,150 +5,196 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Vignesh Sampath | Cloud & DevOps Engineer</title>
 <style>
-  /* Reset & Font */
-  * {margin:0; padding:0; box-sizing:border-box;}
-  body {font-family:'Segoe UI',sans-serif; background:#f8fafc; color:#1e293b; line-height:1.6; scroll-behavior:smooth;}
-  a {text-decoration:none; color:inherit;}
-  img {display:block; max-width:100%;}
+/* Reset & Fonts */
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Segoe UI',sans-serif;background:#f8fafc;color:#1e293b;line-height:1.6;scroll-behavior:smooth;transition:background 0.3s,color 0.3s;}
+a{text-decoration:none;color:inherit;}
+img{display:block;max-width:100%;}
+h2{font-size:2rem;margin-bottom:1.5rem;border-left:5px solid #2563eb;padding-left:10px;color:#1e40af;}
 
-  /* Animations */
-  .fade-in {opacity:0; transform:translateY(30px); animation:fadeInUp 1s forwards;}
-  .fade-delay-1 {animation-delay:0.3s;}
-  .fade-delay-2 {animation-delay:0.6s;}
-  .fade-delay-3 {animation-delay:0.9s;}
-  @keyframes fadeInUp {to{opacity:1; transform:translateY(0);}}
-  .pulse {animation: pulse 2s infinite;}
-  @keyframes pulse {0%,100%{transform:scale(1);}50%{transform:scale(1.15);}}
-  .bounce:hover {transform:translateY(-8px) scale(1.05); transition:0.3s;}
+/* Dark Mode */
+body.dark{background:#111827;color:#f1f5f9;}
+body.dark header{background:linear-gradient(135deg,#1e40af,#2563eb);}
+body.dark section:nth-of-type(even){background:#1f2937;}
+body.dark .skill,.dark .project,.dark .highlight{background:#1f2937;color:#f1f5f9;box-shadow:0 4px 12px rgba(255,255,255,0.05);}
+body.dark footer{background:#111827;color:#f1f5f9;}
+body.dark .btn{background:#2563eb;color:white;}
+body.dark .btn:hover{background:#1e40af;color:white;}
 
-  /* Header */
-  header {background: linear-gradient(135deg,#2563eb,#1e40af); color:white; text-align:center; padding:4rem 2rem; position:relative; overflow:hidden;}
-  #particles-js {position:absolute; top:0; left:0; width:100%; height:100%; z-index:0;}
-  header img {width:150px; height:150px; border-radius:50%; border:4px solid white; margin-bottom:1rem; box-shadow:0 4px 12px rgba(0,0,0,0.2); position:relative; z-index:1;}
-  header h1 {font-size:2.7rem; margin-bottom:0.5rem; animation:fadeInUp 1s forwards; position:relative; z-index:1;}
-  header p {font-size:1.2rem; opacity:0.9; animation:fadeInUp 1.2s forwards; position:relative; z-index:1;}
-  .btn {display:inline-block; margin-top:1rem; padding:0.7rem 1.2rem; border-radius:30px; background:#fff; color:#1e40af; font-weight:bold; transition:0.3s; position:relative; z-index:1;}
-  .btn:hover {background:#93c5fd; color:#0f172a; transform:scale(1.05);}
+/* Animations */
+.fade-in{opacity:0;transform:translateY(30px);animation:fadeInUp 1s forwards;}
+.fade-delay-1{animation-delay:0.3s;}
+.fade-delay-2{animation-delay:0.6s;}
+.fade-delay-3{animation-delay:0.9s;}
+@keyframes fadeInUp{to{opacity:1;transform:translateY(0);}}
+.pulse{animation:pulse 2s infinite;}
+@keyframes pulse{0%,100%{transform:scale(1);}50%{transform:scale(1.15);}}
+.bounce:hover{transform:translateY(-8px) scale(1.05);transition:0.3s;}
 
-  /* Sections */
-  section {padding:3rem 2rem; max-width:1100px; margin:auto; position:relative; overflow:hidden;}
-  section:nth-of-type(even) {background:#e0f2fe;}
-  h2 {font-size:2rem; margin-bottom:1.5rem; border-left:5px solid #2563eb; padding-left:10px; color:#1e40af;}
+/* Header */
+header{background:linear-gradient(135deg,#2563eb,#1e40af);color:white;text-align:center;padding:4rem 2rem;position:relative;overflow:hidden;}
+#particles-js{position:absolute;top:0;left:0;width:100%;height:100%;z-index:0;}
 
-  /* Grid styles */
-  .skills, .projects, .tech-highlights {display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:1.5rem;}
-  .skill, .project, .highlight {background:#fff; padding:1.5rem; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.08); transition:transform 0.3s, box-shadow 0.3s; position:relative;}
-  .skill:hover, .project:hover, .highlight:hover {transform:translateY(-10px) scale(1.03); box-shadow:0 10px 25px rgba(0,0,0,0.15);}
-  .highlight h3 {color:#2563eb; margin-bottom:0.5rem; display:flex; align-items:center;}
-  .highlight i, .skill i, .project i {margin-right:10px; font-size:1.5rem;}
-  .skill i, .project i {color:#2563eb;}
+/* Header image tilt & shadow */
+header img{width:150px;height:150px;border-radius:50%;border:4px solid white;margin-bottom:1rem;box-shadow:0 4px 12px rgba(0,0,0,0.2);position:relative;z-index:1;transition:transform 0.4s,box-shadow 0.4s;}
+header img:hover{transform:rotate(-5deg) scale(1.05);box-shadow:0 15px 25px rgba(0,0,0,0.35);}
+header h1{font-size:2.7rem;margin-bottom:0.5rem;animation:fadeInUp 1s forwards;position:relative;z-index:1;}
+header p{font-size:1.2rem;opacity:0.9;animation:fadeInUp 1.2s forwards;position:relative;z-index:1;}
 
-  /* Contact */
-  footer {text-align:center; padding:2rem; background:#1e293b; color:white; margin-top:2rem; position:relative; overflow:hidden;}
-  footer a {color:#93c5fd; margin:0 10px; transition:0.3s;}
-  footer a:hover {color:#60a5fa;}
+/* Buttons tilt & shadow */
+.btn{display:inline-block;margin-top:1rem;padding:0.7rem 1.2rem;border-radius:30px;background:#fff;color:#1e40af;font-weight:bold;transition:transform 0.3s,box-shadow 0.3s;position:relative;z-index:1;}
+.btn:hover{transform:scale(1.07) translateY(-3px);box-shadow:0 10px 20px rgba(0,0,0,0.3);background:#93c5fd;color:#0f172a;}
 
-  /* Back to Top Button */
-  #backToTop {position:fixed; bottom:30px; right:30px; background:#2563eb; color:#fff; padding:0.7rem 1rem; border-radius:50px; font-size:1.2rem; cursor:pointer; box-shadow:0 4px 12px rgba(0,0,0,0.3); display:none; z-index:1000; transition:0.3s;}
-  #backToTop:hover {background:#1e40af; transform:scale(1.1);}
+/* Dark mode button tilt & shadow */
+.dark-toggle{position:absolute;top:20px;right:20px;padding:0.5rem 1rem;background:#fff;color:#1e40af;border-radius:20px;cursor:pointer;z-index:2;transition:transform 0.3s,box-shadow 0.3s,background 0.3s,color 0.3s;}
+.dark-toggle:hover{transform:scale(1.05) translateY(-2px);box-shadow:0 8px 15px rgba(0,0,0,0.25);background:#93c5fd;color:#0f172a;}
+
+/* Sections */
+section{padding:3rem 2rem;max-width:1100px;margin:auto;position:relative;overflow:hidden;}
+section:nth-of-type(even){background:#e0f2fe;}
+.skills,.projects,.tech-highlights{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;}
+.skill,.project,.highlight{background:#fff;padding:1.5rem;border-radius:12px;box-shadow:0 4px 10px rgba(0,0,0,0.08);transition:transform 0.3s,box-shadow 0.3s;position:relative;}
+.skill:hover,.project:hover,.highlight:hover{transform:translateY(-10px) scale(1.03);box-shadow:0 10px 25px rgba(0,0,0,0.15);}
+.highlight h3{color:#2563eb;margin-bottom:0.5rem;display:flex;align-items:center;}
+.highlight i,.skill i,.project i{margin-right:10px;font-size:1.5rem;}
+.skill i,.project i{color:#2563eb;}
+
+/* Proficiency bars */
+.skill-bar{background:#e2e8f0;border-radius:10px;height:10px;margin-top:10px;overflow:hidden;}
+.skill-bar-inner{height:100%;background:#2563eb;width:0%;border-radius:10px;transition:width 1.5s;}
+
+/* Technical highlight collapsible */
+.highlight-content{display:none;margin-top:10px;}
+.highlight.active .highlight-content{display:block;}
+
+/* Footer */
+footer{text-align:center;padding:2rem;background:#1e293b;color:white;margin-top:2rem;position:relative;overflow:hidden;}
+footer a{color:#93c5fd;margin:0 10px;transition:0.3s;}
+footer a:hover{color:#60a5fa;}
+
+/* Back to Top */
+#backToTop{position:fixed;bottom:30px;right:30px;background:#2563eb;color:#fff;padding:0.7rem 1rem;border-radius:50px;font-size:1.2rem;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,0.3);display:none;z-index:1000;transition:0.3s;}
+#backToTop:hover{background:#1e40af;transform:scale(1.1);}
 </style>
-<!-- Font Awesome -->
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-<!-- Particles.js -->
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script>
-  document.addEventListener('DOMContentLoaded', function(){
-    const faders = document.querySelectorAll('.fade-in');
-    const options = {threshold:0.3};
-    const appearOnScroll = new IntersectionObserver(function(entries, observer){
-      entries.forEach(entry=>{
-        if(entry.isIntersecting){
-          entry.target.style.opacity = 1;
-          entry.target.style.transform = 'translateY(0)';
-          observer.unobserve(entry.target);
-        }
-      });
-    }, options);
-    faders.forEach(fader => {appearOnScroll.observe(fader);});
-
-    const backBtn = document.getElementById('backToTop');
-    window.addEventListener('scroll', () => {backBtn.style.display = window.scrollY > 300 ? 'block':'none';});
-    backBtn.addEventListener('click', () => {window.scrollTo({top:0, behavior:'smooth'});});
-
-    // Initialize particles
-    particlesJS("particles-js", {
-      "particles": {
-        "number": {"value":50,"density":{"enable":true,"value_area":800}},
-        "color": {"value":"#ffffff"},
-        "shape": {"type":"circle"},
-        "opacity": {"value":0.5,"random":true},
-        "size": {"value":3,"random":true},
-        "line_linked":{"enable":true,"distance":120,"color":"#ffffff","opacity":0.2,"width":1},
-        "move":{"enable":true,"speed":2,"direction":"none","out_mode":"out"}
-      },
-      "interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":true,"mode":"repulse"},"onclick":{"enable":true,"mode":"push"}},"modes":{"repulse":{"distance":100},"push":{"particles_nb":4}}}
+document.addEventListener('DOMContentLoaded',function(){
+  // Fade-in
+  const faders=document.querySelectorAll('.fade-in');
+  const appearOnScroll=new IntersectionObserver(function(entries,observer){
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.style.opacity=1;
+        entry.target.style.transform='translateY(0)';
+        observer.unobserve(entry.target);
+      }
     });
+  }, {threshold:0.3});
+  faders.forEach(fader=>{appearOnScroll.observe(fader);});
+
+  // Back to top
+  const backBtn=document.getElementById('backToTop');
+  window.addEventListener('scroll',()=>{backBtn.style.display=window.scrollY>300?'block':'none';});
+  backBtn.addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'});});
+
+  // Dark mode toggle
+  const toggle=document.getElementById('darkToggle');
+  toggle.addEventListener('click',()=>{document.body.classList.toggle('dark');});
+
+  // Skill bar animation
+  const skillBars=document.querySelectorAll('.skill-bar-inner');
+  skillBars.forEach(bar=>{bar.style.width=bar.getAttribute('data-width');});
+
+  // Collapsible highlights
+  const highlights=document.querySelectorAll('.highlight');
+  highlights.forEach(h=>{
+    h.addEventListener('click',()=>{h.classList.toggle('active');});
   });
+
+  // Particles
+  particlesJS("particles-js",{
+    "particles":{"number":{"value":60,"density":{"enable":true,"value_area":800}},"color":{"value":["#2563eb","#f90","#7c3aed"]},
+      "shape":{"type":"circle"},"opacity":{"value":0.5,"random":true},"size":{"value":3,"random":true},
+      "line_linked":{"enable":true,"distance":120,"color":"#ffffff","opacity":0.2,"width":1},
+      "move":{"enable":true,"speed":2,"direction":"none","out_mode":"out"}},
+    "interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":true,"mode":"repulse"},"onclick":{"enable":true,"mode":"push"}},
+      "modes":{"repulse":{"distance":100},"push":{"particles_nb":4}}}
+  });
+});
 </script>
 </head>
 <body>
 
-  <!-- Header -->
-  <header>
-    <div id="particles-js"></div>
-    <img src="1000075941.jpg" alt="Vignesh Sampath">
-    <h1>Vignesh Sampath</h1>
-    <p>CloudOps & DevOps Engineer | GCP & AWS Specialist</p>
-    <a href="Vignesh_Sampath.pdf" class="btn"><i class="fas fa-download"></i> Download Resume</a>
-  </header>
+<header>
+  <div id="particles-js"></div>
+  <div id="darkToggle" class="dark-toggle"><i class="fas fa-moon"></i> Dark Mode</div>
+  <img src="1000075941.jpg" alt="Vignesh Sampath">
+  <h1>Vignesh Sampath</h1>
+  <p>CloudOps & DevOps Engineer | GCP & AWS Specialist</p>
+  <a href="Vignesh_Sampath.pdf" class="btn"><i class="fas fa-download"></i> Download Resume</a>
+</header>
 
-  <!-- About -->
-  <section class="fade-in fade-delay-1">
-    <h2>About Me</h2>
-    <p>I’m a CloudOps & DevOps Engineer with 4 years of experience in Google Cloud Platform and growing expertise in AWS. I specialize in Kubernetes (GKE), infrastructure automation, CI/CD pipelines, cost optimization, and security practices. Currently, I work as Associate Team Lead - CloudOps at Rappit.</p>
-  </section>
+<section class="fade-in fade-delay-1">
+  <h2>About Me</h2>
+  <p>I’m a CloudOps & DevOps Engineer with 4 years of experience in Google Cloud Platform and growing expertise in AWS. I specialize in Kubernetes (GKE), infrastructure automation, CI/CD pipelines, cost optimization, and security practices. Currently, I work as Associate Team Lead - CloudOps at Rappit.</p>
+</section>
 
-  <!-- Skills -->
-  <section class="fade-in fade-delay-2">
-    <h2>Skills</h2>
-    <div class="skills">
-      <div class="skill bounce"><i class="fab fa-google"></i> Google Cloud (GKE, Cloud Build, AlloyDB, Cloud Run)</div>
-      <div class="skill bounce"><i class="fab fa-aws"></i> AWS (EC2, VPC, IAM, S3, RDS)</div>
-      <div class="skill bounce"><i class="fas fa-code-branch"></i> DevOps (Terraform, GitHub, GitLab CI/CD)</div>
-      <div class="skill bounce"><i class="fas fa-lock"></i> Security (WIF, IAM, Key Rotation, VPN)</div>
-      <div class="skill bounce"><i class="fas fa-coins"></i> Cost Optimization & FinOps</div>
-      <div class="skill bounce"><i class="fas fa-rocket"></i> Automation with Cloud Run Jobs</div>
+<section class="fade-in fade-delay-2">
+  <h2>Skills</h2>
+  <div class="skills">
+    <div class="skill bounce"><i class="fab fa-google"></i> Google Cloud (GKE, Cloud Build, AlloyDB, Cloud Run)
+      <div class="skill-bar"><div class="skill-bar-inner" data-width="90%"></div></div>
     </div>
-  </section>
-
-  <!-- Projects -->
-  <section class="fade-in fade-delay-3">
-    <h2>Projects</h2>
-    <div class="projects">
-      <div class="project bounce"><i class="fas fa-building"></i> <strong>Solvay</strong> – Automated infrastructure provisioning, monitoring, and security hardening in GCP.</div>
-      <div class="project bounce"><i class="fas fa-shipping-fast"></i> <strong>Hoyer</strong> – Designed CI/CD pipelines with GitLab and Cloud Build, implemented service mesh on GKE.</div>
+    <div class="skill bounce"><i class="fab fa-aws"></i> AWS (EC2, VPC, IAM, S3, RDS)
+      <div class="skill-bar"><div class="skill-bar-inner" data-width="75%"></div></div>
     </div>
-  </section>
-
-  <!-- Technical Highlights -->
-  <section class="fade-in fade-delay-1">
-    <h2>Technical Highlights</h2>
-    <div class="tech-highlights">
-      <div class="highlight"><h3><i class="fas fa-user-shield pulse"></i> Workload Identity Federation (WIF)</h3><p>Eliminated service account key usage by configuring Workload Identity Federation with GitHub Actions. Secured authentication with short-lived credentials.</p></div>
-      <div class="highlight"><h3><i class="fas fa-database pulse"></i> Automated Memcache Cleaning</h3><p>Replaced VM-based Memcache cleaning jobs with Cloud Run Jobs. Reduced infrastructure cost and enabled auto-scalable cleanup processes.</p></div>
-      <div class="highlight"><h3><i class="fas fa-cloud-upload-alt pulse"></i> AlloyDB Import/Export Automation</h3><p>Implemented import/export of AlloyDB using Cloud Run Jobs and Cloud Storage. Automated backup, restore, and migration processes for disaster recovery.</p></div>
-      <div class="highlight"><h3><i class="fas fa-key pulse"></i> Service Account Key Rotation</h3><p>Automated SA key rotation pipelines using Cloud Scheduler and Cloud Functions. Deprecated long-lived keys and enforced IAM best practices with notifications.</p></div>
+    <div class="skill bounce"><i class="fas fa-code-branch"></i> DevOps (Terraform, GitHub, GitLab CI/CD)
+      <div class="skill-bar"><div class="skill-bar-inner" data-width="85%"></div></div>
     </div>
-  </section>
+    <div class="skill bounce"><i class="fas fa-lock"></i> Security (WIF, IAM, Key Rotation, VPN)
+      <div class="skill-bar"><div class="skill-bar-inner" data-width="80%"></div></div>
+    </div>
+    <div class="skill bounce"><i class="fas fa-coins"></i> Cost Optimization & FinOps
+      <div class="skill-bar"><div class="skill-bar-inner" data-width="70%"></div></div>
+    </div>
+    <div class="skill bounce"><i class="fas fa-rocket"></i> Automation with Cloud Run Jobs
+      <div class="skill-bar"><div class="skill-bar-inner" data-width="85%"></div></div>
+    </div>
+  </div>
+</section>
 
-  <!-- Contact -->
-  <footer class="fade-in fade-delay-2">
-    <p><i class="fas fa-envelope"></i> <a href="mailto:vikichan1014@gmail.com">vikichan1014@gmail.com</a> | <i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/vignesh-sampath-4701691b1" target="_blank">LinkedIn</a></p>
-    <p>© 2025 Vignesh Sampath</p>
-  </footer>
+<section class="fade-in fade-delay-3">
+  <h2>Projects</h2>
+  <div class="projects">
+    <div class="project bounce"><i class="fas fa-building"></i> <strong>Solvay</strong> – Automated infrastructure provisioning, monitoring, and security hardening in GCP.</div>
+    <div class="project bounce"><i class="fas fa-shipping-fast"></i> <strong>Hoyer</strong> – Designed CI/CD pipelines with GitLab and Cloud Build, implemented service mesh on GKE.</div>
+  </div>
+</section>
 
-  <!-- Back to Top Button -->
-  <div id="backToTop"><i class="fas fa-arrow-up"></i></div>
+<section class="fade-in fade-delay-1">
+  <h2>Technical Highlights</h2>
+  <div class="tech-highlights">
+    <div class="highlight"><h3><i class="fas fa-user-shield pulse"></i> Workload Identity Federation (WIF)</h3>
+      <div class="highlight-content"><p>Eliminated service account key usage by configuring Workload Identity Federation with GitHub Actions. Secured authentication with short-lived credentials.</p></div>
+    </div>
+    <div class="highlight"><h3><i class="fas fa-database pulse"></i> Automated Memcache Cleaning</h3>
+      <div class="highlight-content"><p>Replaced VM-based Memcache cleaning jobs with Cloud Run Jobs. Reduced infrastructure cost and enabled auto-scalable cleanup processes.</p></div>
+    </div>
+    <div class="highlight"><h3><i class="fas fa-cloud-upload-alt pulse"></i> AlloyDB Import/Export Automation</h3>
+      <div class="highlight-content"><p>Implemented import/export of AlloyDB using Cloud Run Jobs and Cloud Storage. Automated backup, restore, and migration processes for disaster recovery.</p></div>
+    </div>
+    <div class="highlight"><h3><i class="fas fa-key pulse"></i> Service Account Key Rotation</h3>
+      <div class="highlight-content"><p>Automated SA key rotation pipelines using Cloud Scheduler and Cloud Functions. Deprecated long-lived keys and enforced IAM best practices with notifications.</p></div>
+    </div>
+  </div>
+</section>
 
+<footer class="fade-in fade-delay-2">
+  <p><i class="fas fa-envelope"></i> <a href="mailto:vikichan1014@gmail.com">vikichan1014@gmail.com</a> | <i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/vignesh-sampath-4701691b1" target="_blank">LinkedIn</a></p>
+  <p>&copy; 2025 Vignesh Sampath</p>
+</footer>
+
+<div id="backToTop"><i class="fas fa-arrow-up"></i></div>
 </body>
 </html>
