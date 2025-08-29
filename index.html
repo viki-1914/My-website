@@ -3,172 +3,153 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vignesh Sampath - Cloud & DevOps Engineer</title>
+  <title>Vignesh Sampath – CloudOps & DevOps Portfolio</title>
   <style>
     body {
+      font-family: Arial, sans-serif;
       margin: 0;
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f4f7fb;
-      color: #333;
+      padding: 0;
+      background-color: #121212;
+      color: #e0e0e0;
+      line-height: 1.6;
     }
     header {
-      background: linear-gradient(135deg, #4f46e5, #06b6d4);
-      color: white;
       text-align: center;
-      padding: 50px 20px;
+      padding: 2rem 1rem;
+      background: #1f1f1f;
     }
     header img {
-      width: 150px;
-      height: 150px;
+      width: 160px;
+      height: 160px;
       border-radius: 50%;
-      border: 4px solid white;
-      margin-bottom: 15px;
+      margin-bottom: 1rem;
+      border: 4px solid #333;
     }
     header h1 {
-      margin: 10px 0 5px;
-      font-size: 2.5rem;
+      margin: 0.5rem 0;
+      color: #fff;
     }
     header p {
-      font-size: 1.2rem;
-      margin: 5px 0 15px;
-    }
-    header a {
-      text-decoration: none;
-      background: white;
-      color: #4f46e5;
-      padding: 10px 20px;
-      border-radius: 25px;
-      font-weight: bold;
-      transition: background 0.3s;
-    }
-    header a:hover {
-      background: #e0e7ff;
+      margin: 0;
+      font-size: 1.1rem;
+      color: #aaa;
     }
     section {
+      padding: 2rem;
       max-width: 1000px;
       margin: auto;
-      padding: 40px 20px;
     }
-    section h2 {
-      text-align: center;
-      color: #4f46e5;
-      margin-bottom: 25px;
+    h2 {
+      color: #ff9800;
+      border-bottom: 2px solid #ff9800;
+      padding-bottom: 0.3rem;
+      margin-bottom: 1rem;
     }
-    .card {
-      background: white;
+    .skills-list, .contact-list {
+      list-style: none;
+      padding: 0;
+    }
+    .skills-list li, .contact-list li {
+      padding: 0.3rem 0;
+    }
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+    .project-card {
+      background: #1f1f1f;
       border-radius: 12px;
-      padding: 20px;
-      margin: 20px 0;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      transition: transform 0.2s;
+      padding: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+      transition: transform 0.2s, box-shadow 0.2s;
     }
-    .card:hover {
-      transform: translateY(-5px);
+    .project-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.6);
     }
-    footer {
-      background: #1e293b;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
+    .project-icon {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
     }
-    footer a {
-      color: #06b6d4;
+    .resume-btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.8rem 1.5rem;
+      background: #ff9800;
+      color: #000;
+      font-weight: bold;
       text-decoration: none;
+      border-radius: 8px;
+      transition: background 0.2s;
     }
-    .contact-info {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      flex-wrap: wrap;
-      margin-top: 15px;
+    .resume-btn:hover {
+      background: #ffa733;
     }
   </style>
 </head>
 <body>
-
-  <!-- HEADER -->
   <header>
-    <img src="1000075941.jpg" alt="Profile Picture">
+    <img src="1000075941.jpg" alt="Vignesh Sampath">
     <h1>Vignesh Sampath</h1>
-    <p>Cloud & DevOps Engineer | GCP | AWS | Kubernetes | Automation</p>
-    <a href="Vignesh_Sampath_Resume.pdf" download>📄 Download Resume</a>
+    <p>CloudOps & DevOps Engineer | GCP & AWS | Automation Specialist</p>
+    <a class="resume-btn" href="Vignesh_Sampath.pdf" download>📄 Download Resume</a>
   </header>
 
-  <!-- ABOUT -->
-  <section id="about">
+  <section>
     <h2>About Me</h2>
-    <div class="card">
-      <p>
-        I am a Cloud & DevOps Engineer with 4+ years of experience specializing in
-        <strong>Google Cloud Platform (GCP)</strong>, <strong>AWS</strong>, and <strong>Kubernetes</strong>.
-        Skilled in Infrastructure Management, Cloud Security, and Automation with DevOps practices.
-        Passionate about building scalable, secure, and cost-optimized cloud solutions.
-      </p>
-    </div>
+    <p>I am an Associate Team Lead – CloudOps1 at Rappit with over 4 years of expertise in Google Cloud Platform (GKE, Cloud Run, AlloyDB, IAM), automation, and DevOps practices. I specialize in building scalable, secure, and cost-optimized infrastructures across GCP and AWS.</p>
   </section>
 
-  <!-- SKILLS -->
-  <section id="skills">
+  <section>
     <h2>Skills</h2>
-    <div class="card">
-      <p><strong>Cloud:</strong> GCP, AWS</p>
-      <p><strong>Containerization:</strong> Kubernetes (GKE), Cloud Run, Docker</p>
-      <p><strong>Automation:</strong> Terraform, GitHub Actions, Cloud Build</p>
-      <p><strong>Security:</strong> IAM, Workload Identity Federation, VPNs, Firewalls</p>
-      <p><strong>Other:</strong> Git, GitHub, GitLab, CI/CD pipelines</p>
-    </div>
+    <ul class="skills-list">
+      <li><strong>Cloud:</strong> GCP (GKE, Cloud Run, Cloud Build, IAM, AlloyDB, VPN), AWS (EC2, S3, IAM, VPC)</li>
+      <li><strong>DevOps:</strong> Terraform, GitHub Actions (WIF), GitLab CI/CD, Cloud Build</li>
+      <li><strong>Automation:</strong> Backup/restore workflows, cost optimization, secret rotation</li>
+      <li><strong>Tools:</strong> Docker, Kubernetes, GitHub, GitLab</li>
+    </ul>
   </section>
 
-  <!-- PROJECTS -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="card">
-      <h3>Enterprise Landing Zone Setup</h3>
-      <p>Designed and implemented secure, multi-project landing zone with
-      networking, IAM, and organization policies for a large enterprise migration.</p>
-    </div>
-    <div class="card">
-      <h3>Application Migration to GCP</h3>
-      <p>Automated migration of on-prem workloads to GCP using Cloud Run, GKE, and Cloud SQL.
-      Reduced infrastructure costs by 35% while improving scalability.</p>
-    </div>
-    <div class="card">
-      <h3>VPC & VPN Setup</h3>
-      <p>Configured hybrid connectivity with Cloud VPN and VPC peering
-      ensuring secure communication between on-premise and cloud workloads.</p>
-    </div>
-  </section>
-
-  <!-- BLOGS -->
-  <section id="blogs">
-    <h2>Blogs</h2>
-    <div class="card">
-      <h3><a href="blogs/alloydb.html">AlloyDB Backup & Restore Automation</a></h3>
-      <p>Step-by-step guide on automating AlloyDB backups and restores using Cloud Run Jobs.</p>
-    </div>
-    <div class="card">
-      <h3><a href="blogs/fortigate.html">Fortigate Firewall with GCP</a></h3>
-      <p>Deep dive into setting up and managing Fortigate firewall in Google Cloud for security.</p>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <div class="card">
-      <div class="contact-info">
-        <p>📧 <a href="mailto:vikichan1014@gmail.com">vikichan1014@gmail.com</a></p>
-        <p>🔗 <a href="https://www.linkedin.com/in/vignesh-sampath-4701691b1" target="_blank">LinkedIn</a></p>
-        <p>📞 9790182304</p>
+  <section>
+    <h2>Highlighted Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-icon">💾</div>
+        <h3>AlloyDB Backup & Restore Automation</h3>
+        <p>Automated scheduled backups and one-click restores for AlloyDB using Cloud Run Jobs and Scheduler. Added retention policies, CMEK support, and recovery drills for compliance.</p>
+      </div>
+      <div class="project-card">
+        <div class="project-icon">🚀</div>
+        <h3>Cloud Run Cost Optimization</h3>
+        <p>Migrated workloads from Compute Engine VMs to Cloud Run services. Leveraged autoscaling and per-request billing, cutting infrastructure costs while maintaining performance.</p>
+      </div>
+      <div class="project-card">
+        <div class="project-icon">🗝️</div>
+        <h3>Key & Secret Rotation</h3>
+        <p>Implemented automated key rotation for service accounts and API keys using Cloud Scheduler + Secret Manager. Enabled zero-downtime cutover and compliance with rotation policies.</p>
+      </div>
+      <div class="project-card">
+        <div class="project-icon">🔗</div>
+        <h3>Workload Identity Federation (WIF)</h3>
+        <p>Eliminated long-lived service account keys by enabling GitHub Actions to authenticate directly to GCP via WIF. Reduced security risks and streamlined multi-environment pipelines.</p>
+      </div>
+      <div class="project-card">
+        <div class="project-icon">🧹</div>
+        <h3>Memcache Cleaning Automation</h3>
+        <p>Replaced VM-based memcache flushing with Cloud Run Jobs triggered by Scheduler. Added retries, logging, and monitoring for full observability, cutting costs and operational overhead.</p>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2025 Vignesh Sampath | Cloud & DevOps Engineer</p>
-  </footer>
-
+  <section>
+    <h2>Contact</h2>
+    <ul class="contact-list">
+      <li>📧 Email: vikichan1014@gmail.com</li>
+      <li>🔗 LinkedIn: <a href="https://www.linkedin.com/in/vignesh-sampath-4701691b1" style="color:#ff9800;">linkedin.com/in/vignesh-sampath-4701691b1</a></li>
+      <li>📱 Mobile: +91 9790182304</li>
+    </ul>
+  </section>
 </body>
 </html>
