@@ -1,91 +1,111 @@
-/* General */
-body {
-  font-family: Arial, sans-serif;
+/* Reset */
+* {
   margin: 0;
   padding: 0;
-  background: #f5f7fa;
-  color: #333;
-  line-height: 1.6;
+  box-sizing: border-box;
 }
 
-.container {
-  width: 80%;
-  margin: auto;
-  padding: 20px;
+body {
+  font-family: Arial, sans-serif;
+  background: #121212;
+  color: #fff;
+  line-height: 1.6;
+  text-align: center;
 }
 
 /* Header */
 header {
-  background: #1a73e8;
-  color: white;
-  text-align: center;
-  padding: 30px 0;
+  background: #1f1f1f;
+  padding: 20px;
+  border-bottom: 2px solid #f1c40f;
 }
 
-.header-container nav {
+.profile-container {
+  margin-bottom: 15px;
+}
+
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #f1c40f;
+}
+
+header h1 {
+  margin: 10px 0 5px;
+  font-size: 2rem;
+}
+
+header p {
+  color: #ccc;
+}
+
+/* Navigation */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   margin-top: 15px;
 }
 
-.header-container nav a {
-  color: white;
-  margin: 0 12px;
+nav ul li {
+  margin: 5px 10px;
+}
+
+nav ul li a {
   text-decoration: none;
-  font-weight: bold;
+  padding: 8px 15px;
+  border-radius: 20px;
+  background: #333;
+  color: #fff;
   transition: 0.3s;
 }
 
-.header-container nav a:hover {
-  color: #ffd700;
-}
-
-/* Profile */
-.profile-pic {
-  width: 130px;
-  height: 130px;
-  border-radius: 50%;
-  border: 3px solid white;
-  margin-bottom: 15px;
+nav ul li a:hover,
+nav ul li a.active,
+.resume-btn {
+  background: #f1c40f;
+  color: #000;
 }
 
 /* Sections */
 section {
-  margin: 40px 0;
-  padding: 20px;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 50px 20px;
+  border-bottom: 1px solid #333;
 }
 
 h2 {
-  color: #1a73e8;
+  margin-bottom: 20px;
+  color: #f1c40f;
 }
 
-/* Lists */
-ul {
-  list-style-type: square;
-  padding-left: 20px;
+/* Skills */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
 }
 
-/* Buttons */
-.btn {
-  display: inline-block;
-  background: #1a73e8;
-  color: white;
+.skills span {
+  background: #222;
   padding: 10px 20px;
-  border-radius: 8px;
-  text-decoration: none;
+  border-radius: 20px;
+  border: 1px solid #444;
   transition: 0.3s;
 }
 
-.btn:hover {
-  background: #1557b0;
+.skills span:hover {
+  background: #f1c40f;
+  color: #000;
 }
 
 /* Footer */
 footer {
-  text-align: center;
+  background: #1f1f1f;
   padding: 15px;
-  background: #1a73e8;
-  color: white;
   margin-top: 20px;
+  font-size: 0.9rem;
+  border-top: 2px solid #f1c40f;
 }
