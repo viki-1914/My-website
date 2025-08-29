@@ -3,153 +3,166 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vignesh Sampath – CloudOps & DevOps Portfolio</title>
+  <title>Vignesh Sampath | Cloud & DevOps Engineer</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #121212;
-      color: #e0e0e0;
-      line-height: 1.6;
-    }
+    /* Reset & Font */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', sans-serif; background: #f9fafb; color: #1e293b; line-height: 1.6; }
+
+    /* Header */
     header {
+      background: linear-gradient(90deg, #2563eb, #06b6d4);
+      color: white;
       text-align: center;
-      padding: 2rem 1rem;
-      background: #1f1f1f;
+      padding: 4rem 2rem;
+      position: relative;
     }
     header img {
-      width: 160px;
-      height: 160px;
+      width: 130px;
+      height: 130px;
       border-radius: 50%;
+      border: 4px solid white;
       margin-bottom: 1rem;
-      border: 4px solid #333;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
-    header h1 {
-      margin: 0.5rem 0;
-      color: #fff;
-    }
-    header p {
-      margin: 0;
-      font-size: 1.1rem;
-      color: #aaa;
-    }
-    section {
-      padding: 2rem;
-      max-width: 1000px;
-      margin: auto;
-    }
-    h2 {
-      color: #ff9800;
-      border-bottom: 2px solid #ff9800;
-      padding-bottom: 0.3rem;
-      margin-bottom: 1rem;
-    }
-    .skills-list, .contact-list {
-      list-style: none;
-      padding: 0;
-    }
-    .skills-list li, .contact-list li {
-      padding: 0.3rem 0;
-    }
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1.5rem;
-      margin-top: 1rem;
-    }
-    .project-card {
-      background: #1f1f1f;
-      border-radius: 12px;
-      padding: 1.5rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .project-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 6px 18px rgba(0,0,0,0.6);
-    }
-    .project-icon {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-    }
+    header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+    header p { font-size: 1.2rem; margin-bottom: 1rem; }
     .resume-btn {
       display: inline-block;
-      margin-top: 1rem;
-      padding: 0.8rem 1.5rem;
-      background: #ff9800;
-      color: #000;
+      padding: 0.6rem 1.2rem;
+      background: white;
+      color: #2563eb;
       font-weight: bold;
+      border-radius: 30px;
       text-decoration: none;
-      border-radius: 8px;
-      transition: background 0.2s;
+      transition: all 0.3s ease;
     }
     .resume-btn:hover {
-      background: #ffa733;
+      background: #2563eb;
+      color: white;
+      transform: scale(1.05);
+    }
+
+    /* Sections */
+    section { padding: 3rem 2rem; max-width: 1000px; margin: auto; }
+    h2 {
+      font-size: 2rem;
+      color: #2563eb;
+      margin-bottom: 1.5rem;
+      border-left: 6px solid #06b6d4;
+      padding-left: 10px;
+    }
+    p { margin-bottom: 1rem; }
+
+    /* Skills */
+    .skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; }
+    .skill {
+      background: #e0f2fe;
+      color: #1e3a8a;
+      padding: 1rem;
+      border-radius: 12px;
+      text-align: center;
+      font-weight: 600;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .skill:hover { transform: translateY(-6px); box-shadow: 0 6px 15px rgba(0,0,0,0.15); }
+
+    /* Projects */
+    .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+    .project {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 15px;
+      border: 1px solid #e2e8f0;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .project:hover { transform: translateY(-6px); box-shadow: 0 6px 15px rgba(0,0,0,0.1); }
+    .project h3 { margin-bottom: 0.8rem; color: #0f172a; }
+
+    /* Contact */
+    .contact a {
+      display: inline-block;
+      margin-right: 15px;
+      text-decoration: none;
+      color: #2563eb;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    .contact a:hover { color: #06b6d4; }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      margin-top: 2rem;
+      background: #f1f5f9;
+      color: #475569;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
+
+  <!-- Header -->
   <header>
     <img src="1000075941.jpg" alt="Vignesh Sampath">
     <h1>Vignesh Sampath</h1>
-    <p>CloudOps & DevOps Engineer | GCP & AWS | Automation Specialist</p>
-    <a class="resume-btn" href="Vignesh_Sampath.pdf" download>📄 Download Resume</a>
+    <p>Cloud & DevOps Engineer | GCP | AWS | Kubernetes</p>
+    <a href="Vignesh_Sampath.pdf" class="resume-btn" download>📄 Download Resume</a>
   </header>
 
+  <!-- About -->
   <section>
     <h2>About Me</h2>
-    <p>I am an Associate Team Lead – CloudOps1 at Rappit with over 4 years of expertise in Google Cloud Platform (GKE, Cloud Run, AlloyDB, IAM), automation, and DevOps practices. I specialize in building scalable, secure, and cost-optimized infrastructures across GCP and AWS.</p>
+    <p>
+      I am a CloudOps & DevOps Engineer with 4 years of experience in managing cloud infrastructure, automation, 
+      and security on Google Cloud Platform and AWS. Skilled in Kubernetes (GKE), CI/CD pipelines, Terraform, 
+      and modern DevOps practices. Currently working as Associate Team Lead - CloudOps1 at Rappit.
+    </p>
   </section>
 
+  <!-- Skills -->
   <section>
     <h2>Skills</h2>
-    <ul class="skills-list">
-      <li><strong>Cloud:</strong> GCP (GKE, Cloud Run, Cloud Build, IAM, AlloyDB, VPN), AWS (EC2, S3, IAM, VPC)</li>
-      <li><strong>DevOps:</strong> Terraform, GitHub Actions (WIF), GitLab CI/CD, Cloud Build</li>
-      <li><strong>Automation:</strong> Backup/restore workflows, cost optimization, secret rotation</li>
-      <li><strong>Tools:</strong> Docker, Kubernetes, GitHub, GitLab</li>
-    </ul>
+    <div class="skills">
+      <div class="skill">Google Cloud Platform</div>
+      <div class="skill">AWS</div>
+      <div class="skill">Kubernetes (GKE)</div>
+      <div class="skill">Terraform</div>
+      <div class="skill">CI/CD (Cloud Build, GitHub Actions)</div>
+      <div class="skill">Cloud Security</div>
+      <div class="skill">FinOps</div>
+    </div>
   </section>
 
+  <!-- Projects -->
   <section>
-    <h2>Highlighted Projects</h2>
-    <div class="projects-grid">
-      <div class="project-card">
-        <div class="project-icon">💾</div>
-        <h3>AlloyDB Backup & Restore Automation</h3>
-        <p>Automated scheduled backups and one-click restores for AlloyDB using Cloud Run Jobs and Scheduler. Added retention policies, CMEK support, and recovery drills for compliance.</p>
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="project">
+        <h3>Solvay</h3>
+        <p>Designed and managed scalable GKE clusters, implemented GitOps with Cloud Build, and automated security compliance checks.</p>
       </div>
-      <div class="project-card">
-        <div class="project-icon">🚀</div>
-        <h3>Cloud Run Cost Optimization</h3>
-        <p>Migrated workloads from Compute Engine VMs to Cloud Run services. Leveraged autoscaling and per-request billing, cutting infrastructure costs while maintaining performance.</p>
-      </div>
-      <div class="project-card">
-        <div class="project-icon">🗝️</div>
-        <h3>Key & Secret Rotation</h3>
-        <p>Implemented automated key rotation for service accounts and API keys using Cloud Scheduler + Secret Manager. Enabled zero-downtime cutover and compliance with rotation policies.</p>
-      </div>
-      <div class="project-card">
-        <div class="project-icon">🔗</div>
-        <h3>Workload Identity Federation (WIF)</h3>
-        <p>Eliminated long-lived service account keys by enabling GitHub Actions to authenticate directly to GCP via WIF. Reduced security risks and streamlined multi-environment pipelines.</p>
-      </div>
-      <div class="project-card">
-        <div class="project-icon">🧹</div>
-        <h3>Memcache Cleaning Automation</h3>
-        <p>Replaced VM-based memcache flushing with Cloud Run Jobs triggered by Scheduler. Added retries, logging, and monitoring for full observability, cutting costs and operational overhead.</p>
+      <div class="project">
+        <h3>Hoyer</h3>
+        <p>Built cost-efficient multi-cloud infrastructure with automated VPN setup, CI/CD pipelines, and AlloyDB management.</p>
       </div>
     </div>
   </section>
 
+  <!-- Contact -->
   <section>
     <h2>Contact</h2>
-    <ul class="contact-list">
-      <li>📧 Email: vikichan1014@gmail.com</li>
-      <li>🔗 LinkedIn: <a href="https://www.linkedin.com/in/vignesh-sampath-4701691b1" style="color:#ff9800;">linkedin.com/in/vignesh-sampath-4701691b1</a></li>
-      <li>📱 Mobile: +91 9790182304</li>
-    </ul>
+    <div class="contact">
+      <a href="mailto:vikichan1014@gmail.com">📧 Email</a>
+      <a href="https://www.linkedin.com/in/vignesh-sampath-4701691b1" target="_blank">💼 LinkedIn</a>
+    </div>
   </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Vignesh Sampath | Built with ❤️ for the Cloud
+  </footer>
+
 </body>
 </html>
