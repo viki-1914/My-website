@@ -4,73 +4,161 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vignesh Sampath | Cloud & DevOps Engineer</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #fff;
+    }
+    header {
+      background: rgba(0,0,0,0.6);
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    header img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 4px solid #fff;
+      margin-bottom: 1rem;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #ddd;
+    }
+    nav {
+      background: #111;
+      display: flex;
+      justify-content: center;
+      padding: 0.5rem;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: #00c6ff;
+    }
+    section {
+      padding: 3rem 10%;
+    }
+    section h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 2rem;
+      color: #00c6ff;
+    }
+    .about, .skills, .projects, .contact {
+      background: rgba(255,255,255,0.05);
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0px 4px 12px rgba(0,0,0,0.4);
+    }
+    .skills ul, .projects ul {
+      list-style: none;
+      padding: 0;
+    }
+    .skills li, .projects li {
+      padding: 0.5rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .resume-btn {
+      display: block;
+      text-align: center;
+      margin-top: 1rem;
+    }
+    .resume-btn a {
+      background: #00c6ff;
+      color: #111;
+      padding: 0.7rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .resume-btn a:hover {
+      background: #fff;
+      color: #111;
+    }
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background: #111;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+    footer a {
+      color: #00c6ff;
+      text-decoration: none;
+      margin: 0 0.5rem;
+    }
+    footer a:hover {
+      color: #fff;
+    }
+  </style>
 </head>
 <body>
-  <!-- Header -->
   <header>
-    <div class="container">
-      <img src="1000075941.jpg" alt="Profile Picture" class="profile-img">
-      <h1>Vignesh Sampath</h1>
-      <p>CloudOps & DevOps Engineer | GCP | AWS | Kubernetes | Automation</p>
-    </div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="blogs/index.html">Blogs</a>
-      <a href="#contact">Contact</a>
-      <a href="resume.pdf" download>📄 Resume</a>
-    </nav>
+    <img src="1000075941.jpg" alt="Profile Picture">
+    <h1>Vignesh Sampath</h1>
+    <p>Associate Team Lead - CloudOps | Cloud & DevOps Engineer</p>
   </header>
 
-  <!-- About -->
-  <section id="about" class="container">
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about" class="about">
     <h2>About Me</h2>
     <p>
-      I am a CloudOps & DevOps Engineer with 4 years of experience in Google Cloud Platform (GCP), Kubernetes, and automation practices. 
-      Skilled in infrastructure management, CI/CD, cost optimization, and implementing secure cloud solutions.
+      I am a CloudOps & DevOps Engineer with 4+ years of experience specializing in Google Cloud Platform (GCP), GKE, infrastructure management, security, and automation practices. 
+      Currently working as an <strong>Associate Team Lead - CloudOps</strong> at Rappit, I have hands-on expertise in building scalable, secure, and cost-efficient cloud solutions.
     </p>
+    <div class="resume-btn">
+      <a href="resume.pdf" download>📄 Download Resume</a>
+    </div>
   </section>
 
-  <!-- Skills -->
-  <section id="skills" class="container">
-    <h2>Skills</h2>
-    <ul class="skills-list">
-      <li>Google Cloud Platform (GCP)</li>
-      <li>AWS (Learning)</li>
-      <li>Kubernetes & GKE</li>
-      <li>CI/CD (Cloud Build, GitHub Actions)</li>
-      <li>Terraform & Infrastructure as Code</li>
-      <li>Cloud Security & Networking</li>
-      <li>Monitoring & Logging</li>
+  <section id="skills" class="skills">
+    <h2>Skills & Certifications</h2>
+    <ul>
+      <li>Google Cloud Platform (GCP) | AWS (Learning)</li>
+      <li>Kubernetes (GKE) | Cloud Run | Terraform | CI/CD</li>
+      <li>DevOps Tools: GitHub, GitLab, Jenkins</li>
+      <li>Cloud Security | IAM | Networking</li>
+      <li>Certifications: [List here if available]</li>
     </ul>
   </section>
 
-  <!-- Projects -->
-  <section id="projects" class="container">
+  <section id="projects" class="projects">
     <h2>Projects</h2>
-    <div class="project-card">
-      <h3>Solvay</h3>
-      <p>Implemented automated AlloyDB backup/restore with Cloud Run jobs.</p>
-    </div>
-    <div class="project-card">
-      <h3>Hoyer</h3>
-      <p>Optimized caching by migrating VM-based Memcache to Cloud Run, reducing costs drastically.</p>
-    </div>
+    <ul>
+      <li><strong>Solvay:</strong> Automated infrastructure on GCP using GKE and Terraform.</li>
+      <li><strong>Hoyer:</strong> Migrated workloads to Cloud Run, reducing cost and complexity.</li>
+      <li><a href="blogs/alloydb.html">📘 AlloyDB IAM Authentication Blog</a></li>
+      <li><a href="blogs/fortigate.html">📘 FortiGate Cloud VPN Blog</a></li>
+    </ul>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="container">
+  <section id="contact" class="contact">
     <h2>Contact Me</h2>
-    <p>Email: <a href="mailto:vikichan1014@gmail.com">vikichan1014@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/vignesh-sampath-4701691b1" target="_blank">Vignesh Sampath</a></p>
-    <p>Phone: <a href="tel:+919790182304">+91 9790182304</a></p>
+    <p>📧 Email: <a href="mailto:vikichan1014@gmail.com">vikichan1014@gmail.com</a></p>
+    <p>🔗 LinkedIn: <a href="https://www.linkedin.com/in/vignesh-sampath-4701691b1" target="_blank">linkedin.com/in/vignesh-sampath</a></p>
+    <p>📱 Phone: <a href="tel:+919790182304">+91 9790182304</a></p>
   </section>
 
   <footer>
-    <p>© 2025 Vignesh Sampath | CloudOps & DevOps Engineer</p>
+    <p>&copy; 2025 Vignesh Sampath | CloudOps & DevOps Portfolio</p>
   </footer>
 </body>
 </html>
