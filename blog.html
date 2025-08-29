@@ -7,52 +7,29 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Header -->
   <header>
-    <div class="container profile-header">
-      <img src="1000075941.jpg" alt="Vignesh Sampath" class="profile-pic">
-      <div>
-        <h1>Vignesh Sampath</h1>
-        <p>CloudOps & DevOps Engineer | GCP & AWS Enthusiast</p>
-      </div>
-    </div>
+    <h1>📝 My Blogs</h1>
     <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="blog.html" class="active">Blogs</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+      <a href="index.html">🏠 Home</a>
     </nav>
   </header>
 
-  <!-- Blog Section -->
-  <section id="blogs" class="section">
-    <h2>Latest Blogs</h2>
+  <main class="container">
+    <section class="blog-list">
+      <article class="card">
+        <h2><a href="blogs/alloydb-backup.html">Automating AlloyDB Backup & Restore</a></h2>
+        <p>A guide on using Cloud Run Jobs for seamless backup and restore automation in AlloyDB.</p>
+      </article>
 
-    <div class="blog-grid">
-      <div class="blog-card">
-        <h3>Fortigate VPN Setup on GCP</h3>
-        <p>Step-by-step guide on deploying Fortigate firewall in Google Cloud, configuring VPN, and securing hybrid cloud connections.</p>
-        <a href="blogs/fortigate-vpn.html" class="btn">Read More</a>
-      </div>
+      <article class="card">
+        <h2><a href="blogs/fortigate-vpn.html">Setting up Fortigate VPN on GCP</a></h2>
+        <p>Step-by-step explanation of Fortigate VPN integration in Google Cloud.</p>
+      </article>
+    </section>
+  </main>
 
-      <div class="blog-card">
-        <h3>Automating AlloyDB Backup & Restore</h3>
-        <p>How I automated AlloyDB backups and restores using Cloud Run Jobs, ensuring reliability and reducing manual intervention.</p>
-        <a href="blogs/alloydb-backup.html" class="btn">Read More</a>
-      </div>
-
-      <div class="blog-card">
-        <h3>Cost Optimization with Cloud Run</h3>
-        <p>Replacing VMs with Cloud Run for memcache flushing reduced costs drastically. Here’s the breakdown of the approach.</p>
-        <a href="blogs/cost-optimization.html" class="btn">Read More</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
   <footer>
-    <p>© 2025 Vignesh Sampath | Built with ❤️ using GitHub Pages</p>
+    <p>© 2025 Vignesh Sampath</p>
   </footer>
 </body>
 </html>
