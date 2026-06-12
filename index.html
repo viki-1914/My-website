@@ -6,11 +6,10 @@
 
 <title>Vignesh Sampath | Cloud & DevOps Engineer</title>
 
-<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-
 <style>
+/* =========================
+   BASE
+========================= */
 * {
   margin: 0;
   padding: 0;
@@ -19,132 +18,132 @@
 
 body {
   font-family: "Segoe UI", sans-serif;
-  background: #f6f8fc;
-  color: #1f2937;
+  background: #f5f7fb;
+  color: #111827;
   line-height: 1.6;
 }
 
-/* HEADER */
+/* =========================
+   HEADER (PROFESSIONAL HERO)
+========================= */
 header {
-  background: linear-gradient(135deg, #2563eb, #1e40af);
+  background: linear-gradient(135deg, #0f172a, #1e3a8a);
   color: white;
   text-align: center;
-  padding: 4rem 2rem;
-  position: relative;
-}
-
-#particles-js {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
+  padding: 4rem 1.5rem;
 }
 
 header img {
-  width: 140px;
-  height: 140px;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
-  border: 4px solid white;
+  border: 3px solid rgba(255,255,255,0.2);
   margin-bottom: 15px;
-  position: relative;
-  z-index: 1;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
 }
 
 header h1 {
-  font-size: 2.5rem;
-  position: relative;
-  z-index: 1;
+  font-size: 2.4rem;
 }
 
 header p {
-  margin-top: 10px;
-  opacity: 0.9;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-  z-index: 1;
+  max-width: 750px;
+  margin: 10px auto;
+  opacity: 0.85;
 }
 
+/* BUTTON */
 .btn {
   display: inline-block;
   margin-top: 15px;
   padding: 10px 18px;
-  background: white;
-  color: #1e40af;
-  border-radius: 8px;
+  border-radius: 10px;
+  background: #3b82f6;
+  color: white;
   text-decoration: none;
-  font-weight: bold;
-  position: relative;
-  z-index: 1;
+  font-weight: 600;
 }
 
 .btn:hover {
-  background: #dbeafe;
+  background: #2563eb;
 }
 
-/* SECTIONS */
+/* =========================
+   SECTIONS
+========================= */
 section {
-  max-width: 1100px;
-  margin: 30px auto;
+  max-width: 1050px;
+  margin: 25px auto;
   background: white;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  padding: 28px;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
 }
 
 h2 {
+  font-size: 1.6rem;
   border-left: 4px solid #2563eb;
   padding-left: 10px;
   margin-bottom: 15px;
-  color: #1e40af;
 }
 
-/* PROJECT */
+/* =========================
+   PROJECT CARD
+========================= */
 .project {
   background: #f9fafb;
-  padding: 20px;
-  border-radius: 10px;
-  margin-top: 15px;
-}
-
-ul {
-  padding-left: 20px;
+  padding: 18px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
   margin-top: 10px;
 }
 
-/* SKILLS */
+.project:hover {
+  transform: translateY(-3px);
+  transition: 0.2s;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* LIST */
+ul {
+  padding-left: 18px;
+}
+
+/* =========================
+   SKILLS GRID
+========================= */
 .skills {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
 }
 
 .skill {
-  background: #f9fafb;
-  padding: 15px;
+  background: #f8fafc;
+  padding: 14px;
   border-radius: 10px;
+  border: 1px solid #e5e7eb;
 }
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 footer {
   text-align: center;
-  padding: 20px;
-  background: #111827;
-  color: white;
+  padding: 22px;
+  background: #0f172a;
+  color: #cbd5e1;
   margin-top: 30px;
 }
 </style>
+
 </head>
 
 <body>
 
+<!-- HERO -->
 <header>
-  <div id="particles-js"></div>
-
-  <img src="1000075941.jpg" alt="Vignesh">
+  <img src="1000075941.jpg" alt="Profile">
 
   <h1>Vignesh Sampath</h1>
 
@@ -153,8 +152,8 @@ footer {
   </p>
 
   <p>
-    I design and automate scalable cloud infrastructure focused on reliability, cost optimization,
-    and operational efficiency using Kubernetes, CI/CD, and cloud-native services.
+    I design and automate scalable cloud infrastructure focused on reliability,
+    cost optimization, and operational efficiency using Kubernetes, CI/CD, and cloud-native services.
   </p>
 
   <a class="btn" href="Vignesh_Sampath.pdf">📄 Download Resume</a>
@@ -178,26 +177,25 @@ footer {
     <h3>Cloud Resource Lifecycle Automation Platform</h3>
 
     <p>
-      Built a production-grade automation system to manage lifecycle of cloud resources
-      across non-production environments.
+      Built a production-grade automation system to manage lifecycle of cloud resources in non-production environments.
     </p>
 
     <ul>
       <li>Automated start/stop of AlloyDB instances</li>
-      <li>Recreation workflows for Memcached clusters</li>
+      <li>Memcached cluster recreation & teardown</li>
       <li>Elasticsearch lifecycle automation</li>
-      <li>Integrated Cloud Scheduler + Cloud Run Jobs</li>
+      <li>Cloud Scheduler + Cloud Run Jobs integration</li>
     </ul>
 
-    <p><strong>Impact:</strong></p>
+    <p><b>Impact:</b></p>
     <ul>
-      <li>Reduced cloud cost by eliminating idle resources</li>
-      <li>Removed manual operational workload</li>
-      <li>Standardized cloud lifecycle management across environments</li>
+      <li>Reduced idle cloud cost significantly</li>
+      <li>Eliminated manual operational work</li>
+      <li>Standardized cloud lifecycle management</li>
     </ul>
 
     <a class="btn" href="blogs/cloud-operations-automation.html">
-      View Full Case Study →
+      View Case Study →
     </a>
   </div>
 </section>
@@ -207,25 +205,11 @@ footer {
   <h2>Skills</h2>
 
   <div class="skills">
-    <div class="skill">
-      ☁️ GCP (GKE, Cloud Run, IAM, Cloud Build)
-    </div>
-
-    <div class="skill">
-      ☁️ AWS (EC2, VPC, S3, IAM)
-    </div>
-
-    <div class="skill">
-      ⚙️ DevOps (Terraform, GitHub Actions, CI/CD)
-    </div>
-
-    <div class="skill">
-      🔐 Security (IAM, WIF, VPN, Key Rotation)
-    </div>
-
-    <div class="skill">
-      💰 FinOps (Cost Optimization, Automation)
-    </div>
+    <div class="skill">☁️ GCP (GKE, Cloud Run, IAM, Cloud Build)</div>
+    <div class="skill">☁️ AWS (EC2, VPC, S3, IAM)</div>
+    <div class="skill">⚙️ DevOps (Terraform, GitHub Actions, CI/CD)</div>
+    <div class="skill">🔐 Security (IAM, VPN, WIF, Key Rotation)</div>
+    <div class="skill">💰 FinOps (Cost Optimization & Automation)</div>
   </div>
 </section>
 
@@ -240,11 +224,11 @@ footer {
 
   <div class="project">
     <h3>Hoyer</h3>
-    <p>CI/CD pipelines using GitLab + Cloud Build and service mesh on GKE.</p>
+    <p>CI/CD pipelines using GitLab + Cloud Build and Kubernetes service mesh.</p>
   </div>
 </section>
 
-<!-- BLOG -->
+<!-- BLOGS -->
 <section>
   <h2>Blogs</h2>
 
@@ -259,22 +243,10 @@ footer {
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
   © 2025 Vignesh Sampath | Cloud & DevOps Engineer
 </footer>
-
-<script>
-particlesJS("particles-js", {
-  particles: {
-    number: { value: 30 },
-    color: { value: "#ffffff" },
-    shape: { type: "circle" },
-    opacity: { value: 0.4 },
-    size: { value: 3 },
-    move: { enable: true, speed: 2 }
-  }
-});
-</script>
 
 </body>
 </html>
