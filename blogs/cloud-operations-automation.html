@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cloud Operations Automation | Vignesh Sampath</title>
+  <link rel="stylesheet" href="../style.css">
+
+  <style>
+    .container {
+      width: 85%;
+      margin: auto;
+      padding: 30px 0;
+    }
+
+    .section {
+      background: #f8fafc;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      color: #1d4ed8;
+    }
+
+    h2 {
+      color: #1e40af;
+      margin-bottom: 10px;
+    }
+
+    .meta {
+      color: #64748b;
+      font-size: 13px;
+      margin-bottom: 20px;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #2563eb;
+      color: white;
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-size: 11px;
+      margin-right: 5px;
+      margin-top: 5px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header style="text-align:center; padding:30px;">
+  <h1>⚙️ Cloud Operations Automation at Scale</h1>
+  <p class="meta">
+    GCP | FinOps | DevOps Automation | Production Infrastructure Management
+  </p>
+</header>
+
+<main class="container">
+
+  <!-- INTRO -->
+  <div class="section">
+    <h2>🚀 Overview</h2>
+    <p>
+      This project focuses on automating the lifecycle of critical cloud resources in non-production environments,
+      including AlloyDB, Memcached, and Elasticsearch. The goal was to reduce operational cost, eliminate manual effort,
+      and standardize resource management across cloud environments.
+    </p>
+  </div>
+
+  <!-- PROBLEM -->
+  <div class="section">
+    <h2>🚨 Problem Statement</h2>
+    <p>
+      In development and non-production environments, cloud resources were running continuously even when idle.
+      This resulted in unnecessary cost consumption and required manual intervention for start/stop operations.
+    </p>
+  </div>
+
+  <!-- SOLUTION -->
+  <div class="section">
+    <h2>💡 Solution Architecture</h2>
+    <ul>
+      <li>Cloud Scheduler triggers lifecycle workflows</li>
+      <li>Cloud Run Jobs execute start/stop operations</li>
+      <li>IAM roles enforce secure access control</li>
+      <li>Logging & Monitoring ensure observability</li>
+    </ul>
+  </div>
+
+  <!-- AUTOMATION DETAILS -->
+  <div class="section">
+    <h2>🛠️ Automation Implemented</h2>
+    <ul>
+      <li>Automated start/stop of AlloyDB instances based on schedule</li>
+      <li>Memcached cluster recreation and teardown for cost optimization</li>
+      <li>Elasticsearch cluster lifecycle management (start/stop workflows)</li>
+      <li>Environment-based control for dev/non-prod workloads</li>
+    </ul>
+  </div>
+
+  <!-- TECH STACK -->
+  <div class="section">
+    <h2>☁️ Technology Stack</h2>
+    <span class="tag">Google Cloud Scheduler</span>
+    <span class="tag">Cloud Run Jobs</span>
+    <span class="tag">IAM</span>
+    <span class="tag">AlloyDB</span>
+    <span class="tag">Memcached</span>
+    <span class="tag">Elasticsearch</span>
+    <span class="tag">FinOps</span>
+  </div>
+
+  <!-- IMPACT -->
+  <div class="section">
+    <h2>💰 Impact</h2>
+    <ul>
+      <li>Reduced idle resource costs in non-production environments</li>
+      <li>Eliminated manual intervention for resource lifecycle management</li>
+      <li>Improved operational efficiency for CloudOps team</li>
+      <li>Standardized automation across multiple cloud services</li>
+    </ul>
+  </div>
+
+  <!-- ENGINEERING CONSIDERATIONS -->
+  <div class="section">
+    <h2>🔐 Engineering Considerations</h2>
+    <ul>
+      <li>Ensured safe shutdown without data loss</li>
+      <li>Handled dependencies between services during lifecycle operations</li>
+      <li>Implemented IAM least privilege access model</li>
+      <li>Added logging and audit trails for operations visibility</li>
+    </ul>
+  </div>
+
+  <!-- TAGS -->
+  <div style="margin-top:20px;">
+    <span class="tag">Automation</span>
+    <span class="tag">CloudOps</span>
+    <span class="tag">FinOps</span>
+    <span class="tag">GCP</span>
+    <span class="tag">DevOps</span>
+  </div>
+
+</main>
+
+<footer style="text-align:center; padding:20px; margin-top:30px;">
+  © 2025 Vignesh Sampath | Cloud & DevOps Engineer
+</footer>
+
+</body>
+</html>
